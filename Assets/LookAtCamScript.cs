@@ -13,6 +13,7 @@ public class LookAtCamScript : MonoBehaviour {
 
     private void Update()
     {
-        transform.LookAt(-cam.transform.position, Vector3.up);
+        transform.LookAt(cam.transform.position, Vector3.up);
+        transform.Rotate(new Vector3(0, 180));
     }
 }

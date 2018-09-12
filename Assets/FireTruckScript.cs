@@ -38,14 +38,25 @@ public class FireTruckScript : MonoBehaviour {
 
     public void CheckDestination()
     {
+        //first just check if the building were going too is on fire
+        if (localTarget.GetComponent<BuildingScript>() != null)
+        {
+            if (localTarget.GetComponent<BuildingScript>().onFire == false)
+            {
+                SetTarget(GameObject.FindGameObjectWithTag("Station"));
+            }
+        }
+
+        float dist = Vector3.Distance(localTarget.transform.position, transform.position);
+
         //if we are in range of the target
-        if (Vector3.Distance(localTarget.transform.position,transform.position) < distanceCheckDist)
+        if (dist < distanceCheckDist)
         {
             if (localTarget.tag == "Station")
             {
                 //we are in range of the station
                 Destroy(gameObject);
-                localTarget.GetComponent<FireStationScript>().spareTrucks += 1;
+                localTarget.GetComponent<FireStationScript>().UpdateTruck(1);
             }
             else if (!inRange)
             {
@@ -65,7 +76,6 @@ public class FireTruckScript : MonoBehaviour {
                     //navAgent.SetDestination(GameObject.FindGameObjectWithTag("Station").transform.position);
                 }
             }
-
         }
 
         

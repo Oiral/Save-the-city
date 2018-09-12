@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class BuildingScript : MonoBehaviour {
 
     public bool onFire;
+    public bool demolished;
 
     public string nameOfPerson;
     public float timeForFire;
@@ -18,6 +20,10 @@ public class BuildingScript : MonoBehaviour {
     public GameObject fireParticlePrefab;
     GameObject fire;
 
+    public float fireTimer = 0;
+
+    public Material demolishedMat;
+
     private void Update()
     {
         DisplayCheck();
@@ -29,9 +35,18 @@ public class BuildingScript : MonoBehaviour {
             if (timeForFire < 0)
             {
                 onFire = false;
+                fireTimer = 0;
             }
         }
+        if (onFire && fireEngines == 0)
+        {
+            fireTimer += Time.deltaTime;
 
+            if (fireTimer > 10)
+            {
+                DemolishBuilding();
+            }
+        }
     }
 
     public void DisplayCheck()
@@ -64,5 +79,17 @@ public class BuildingScript : MonoBehaviour {
     public void FireEngineNear()
     {
         fireEngines += 1;
+    }
+
+    void DemolishBuilding()
+    {
+        tag = "Untagged";
+        Destroy(fire);
+        onFire = false;
+        demolished = true;
+        NavMeshObstacle obstacle = gameObject.AddComponent<NavMeshObstacle>();
+        obstacle.size = new Vector3(6, 5, 6);
+        obstacle.carving = true;
+        GetComponentInChildren<MeshRenderer>().material = demolishedMat;
     }
 }

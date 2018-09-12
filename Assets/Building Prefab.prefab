@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onFire: 0
+  demolished: 0
   nameOfPerson: 
   timeForFire: 0
   infoDisplayPrefab: {fileID: 1877460114397832, guid: 2923d92034d40bf449416ccc34507200,
@@ -145,3 +146,5 @@ MonoBehaviour:
   fireEngines: 0
   fireParticlePrefab: {fileID: 1563762216502206, guid: b9255769ae10da449be7926edf7016e0,
     type: 2}
+  fireTimer: 0
+  demolishedMat: {fileID: 2100000, guid: 19759c2a5f0fb8f4cbe6392cfca070d0, type: 2}

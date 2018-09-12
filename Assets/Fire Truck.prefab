@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b61d476f01d11c42ab1683a42140909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceCheckDist: 5
+  distanceCheckDist: 4
   localTarget: {fileID: 0}
 --- !u!195 &195374323643693636
 NavMeshAgent:

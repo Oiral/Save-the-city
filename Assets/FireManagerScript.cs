@@ -44,7 +44,7 @@ public class FireManagerScript : MonoBehaviour {
     {
         GameObject randomBuilding = buildings[Random.Range(0, buildings.Count)];
         BuildingScript buildingScript = randomBuilding.GetComponent<BuildingScript>();
-        while (buildingScript.onFire)
+        while (buildingScript.onFire || buildingScript.demolished)
         {
             randomBuilding = buildings[Random.Range(0, buildings.Count)];
             buildingScript = randomBuilding.GetComponent<BuildingScript>();
