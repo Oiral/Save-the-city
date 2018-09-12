@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class FireStationScript : MonoBehaviour {
 
@@ -8,11 +9,15 @@ public class FireStationScript : MonoBehaviour {
 
     public Transform spawnPoint;
 
-    private void OnMouseOver()
+    public int spareTrucks = 3;
+
+    public void CallFireTruck(GameObject buildingOnFire)
     {
-        if (Input.GetMouseButtonDown(0))
+        if (spareTrucks > 0)
         {
-            Instantiate(fireTruckPrefab, spawnPoint.position, Quaternion.identity);
+            spareTrucks -= 1;
+            GameObject truck = Instantiate(fireTruckPrefab, spawnPoint.position, Quaternion.identity);
+            truck.GetComponent<FireTruckScript>().SetTarget(buildingOnFire);
         }
     }
 }

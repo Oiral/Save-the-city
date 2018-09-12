@@ -6,14 +6,14 @@ using System.Linq;
 
 public class FireManagerScript : MonoBehaviour {
 
-    public GameObject fireParticlePrefab;
+    
 
     public GameObject buildingParent;
     public List<GameObject> buildings;
 
     private void Start()
     {
-        foreach (Transform building in buildingParent.GetComponentsInChildren<Transform>())
+        foreach (Transform building in buildingParent.transform)
         {
             //check if its not the parent
             if (building != buildingParent.transform)
@@ -21,6 +21,7 @@ public class FireManagerScript : MonoBehaviour {
                 buildings.Add(building.gameObject);
             }
         }
+        StartCoroutine(RepeatFire());
     }
 
     private void Update()
@@ -32,6 +33,13 @@ public class FireManagerScript : MonoBehaviour {
         }
     }
 
+    IEnumerator RepeatFire()
+    {
+        yield return new WaitForSeconds(Random.Range(5f, 10f));
+        StartFire();
+        StartCoroutine(RepeatFire());
+    }
+
     public void StartFire()
     {
         GameObject randomBuilding = buildings[Random.Range(0, buildings.Count)];
@@ -41,8 +49,6 @@ public class FireManagerScript : MonoBehaviour {
             randomBuilding = buildings[Random.Range(0, buildings.Count)];
             buildingScript = randomBuilding.GetComponent<BuildingScript>();
         }
-
-        Instantiate(fireParticlePrefab, randomBuilding.transform.position, Quaternion.Euler(-90, 0, 0));
 
         buildingScript.fireEngines = 0;
         buildingScript.onFire = true;
