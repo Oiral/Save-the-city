@@ -6,6 +6,12 @@ public class ReadCSV : MonoBehaviour{
 
     public TextAsset csvFile;
 
+    private void Start()
+    {
+        string[,] grid = SplitGrid(csvFile.text);
+        DebugArray(grid);
+    }
+
     static public string[,] SplitGrid(string csvText)
     {
         string[] lines = csvText.Split("\n"[0]);
@@ -29,7 +35,7 @@ public class ReadCSV : MonoBehaviour{
 
                 // This line was to replace "" with " in my output. 
                 // Include or edit it as you wish.
-                outputGrid[x, y] = outputGrid[x, y].Replace("\"\"", "\"");
+                //outputGrid[x, y] = outputGrid[x, y].Replace("\"\"", "\"");
             }
         }
 
@@ -57,5 +63,62 @@ public class ReadCSV : MonoBehaviour{
         Debug.Log(textOutput);
     }
 
-    
+    static public string[,] TrimArray(int rowToRemove, string[,] original, int collumnToRemove)
+    {
+        string[,] result = new string[original.GetLength(0) - 1, original.GetLength(1) - 1];
+        for (int i = 0, r = 0; i < original.GetLength(0); i++)
+        {
+            if (i == rowToRemove)
+            {
+                continue;
+            }
+            for (int j = 0, c = 0; j < original.GetLength(1); j++)
+            {
+                if (j == collumnToRemove)
+                {
+                    continue;
+                }
+                result[r, c] = original[i, j];
+                c++;
+            }
+            r++;
+        }
+        return result;
+    }
+    static public string[,] TrimArray(int rowToRemove,string[,] original)
+    {
+        string[,] result = new string[original.GetLength(0) - 1, original.GetLength(1)];
+        for (int i = 0,r = 0; i < original.GetLength(0); i++)
+        {
+            if (i == rowToRemove)
+            {
+                continue;
+            }
+            for (int j = 0; j < original.GetLength(1); j++)
+            {
+                result[r, j] = original[i, j];
+            }
+            r++;
+        }
+        return result;
+    }
+    static public string[,] TrimArray(string[,] original, int collumnToRemove)
+    {
+        string[,] result = new string[original.GetLength(0) - 1, original.GetLength(1) - 1];
+        for (int i = 0; i < original.GetLength(0); i++)
+        {
+            for (int j = 0, c = 0; j < original.GetLength(1); j++)
+            {
+                if (j == collumnToRemove)
+                {
+                    continue;
+                }
+                result[i, c] = original[i, j];
+                c++;
+            }
+        }
+        return result;
+    }
+
+
 }

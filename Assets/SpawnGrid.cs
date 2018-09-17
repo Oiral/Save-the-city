@@ -15,10 +15,13 @@ public class SpawnGrid : MonoBehaviour {
         {
             for (int z = 0; z < grid.GetUpperBound(1); z++)
             {
-                int y = int.Parse(grid[x, z]);
+                if (grid[x, z] != "")
+                {
+                    int y = int.Parse(grid[x, z]);
 
-                GameObject objectInstance = Instantiate(boxPrefab);
-                objectInstance.transform.position = new Vector3(x, y, z);
+                    GameObject objectInstance = Instantiate(boxPrefab);
+                    objectInstance.transform.position = new Vector3(x, y, z);
+                }
             }
         }
 	}
