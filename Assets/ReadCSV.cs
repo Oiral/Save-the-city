@@ -9,7 +9,12 @@ public class ReadCSV : MonoBehaviour{
     private void Start()
     {
         string[,] grid = SplitGrid(csvFile.text);
+        grid = TrimArray(0, grid, 0);
         DebugArray(grid);
+
+        //The position of each event within the file
+        int[] eventNumber = GetCollumnItems(0,grid);
+        //Debug.Log(eventNumber[2]);
     }
 
     static public string[,] SplitGrid(string csvText)
@@ -120,5 +125,41 @@ public class ReadCSV : MonoBehaviour{
         return result;
     }
 
+    static public int[] GetCollumnItems(int collumn, string[,] array)
+    {
+        List<int> TempList = new List<int>();
 
+        for (int i = 0; i < array.GetLength(1) - 1; i++)
+        {
+            if (array[collumn, i] != "")
+            {
+                TempList.Add(i);
+            }
+        }
+
+        return (TempList.ToArray());
+
+    }
+
+    static public int[] GetCollumnItemBetween(string[,] array,int collumn,int rowStart,int rowFinish)
+    {
+        List<int> TempList = new List<int>();
+
+        //Check if we are check past the end of the array
+        if (rowFinish > array.GetLength(1))
+        {
+            Debug.LogError("Array index out of range to check");
+            return null;
+        }
+
+        for (int i = rowStart; i < rowFinish - 1; i++)
+        {
+            if (array[collumn, i] != "")
+            {
+                TempList.Add(i);
+            }
+        }
+        return (TempList.ToArray());
+    }
 }
+
