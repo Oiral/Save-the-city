@@ -44,7 +44,7 @@ public class BuildingScript : MonoBehaviour {
 
             if (fireTimer > 10)
             {
-                DemolishBuilding();
+                //DemolishBuilding();
             }
         }
     }
@@ -55,7 +55,8 @@ public class BuildingScript : MonoBehaviour {
         if (onFire && infoDisplay == null)
         {
             infoDisplay = Instantiate(infoDisplayPrefab, transform.position, Quaternion.identity, transform);
-            infoDisplay.GetComponentInChildren<Button>().onClick.AddListener(CallFireEngine);
+            //infoDisplay.GetComponentInChildren<Button>().onClick.AddListener(CallFireEngine);
+            infoDisplay.GetComponentInChildren<Button>().onClick.AddListener(GameObject.FindGameObjectWithTag("InteractionEvent").GetComponent<EventManagerScript>().NextEvent);
             fire = Instantiate(fireParticlePrefab, gameObject.transform.position, Quaternion.Euler(-90, 0, 0));
         }
 

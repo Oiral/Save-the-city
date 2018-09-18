@@ -152,7 +152,7 @@ public class ReadCSV : MonoBehaviour{
             return null;
         }
 
-        for (int i = rowStart; i < rowFinish - 1; i++)
+        for (int i = rowStart; i < rowFinish; i++)
         {
             if (array[collumn, i] != "")
             {

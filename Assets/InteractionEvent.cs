@@ -25,7 +25,7 @@ public class InteractionEvent{
         int nextEventRow;
         if (number == events.Length-1)
         {
-            nextEventRow = array.GetLength(0);
+            nextEventRow = array.GetLength(1) + 1;
         }
         else
         {
@@ -40,16 +40,14 @@ public class InteractionEvent{
             options.Add(i);
         }
 
-        Debug.Log(options);
-
         //Randomise the two options and make sure we cant 
         int num = (int)Random.Range(0, options.Count);
         option1 = options[num];
-        options.Remove(num);
+        options.RemoveAt(num);
 
         num = Random.Range(0, options.Count);
         option2 = options[num];
-        options.Remove(num);
+        options.RemoveAt(num);
 
         //Get reaction for option 1
         reaction1 = option1 + (int)Random.Range(0, 2);
