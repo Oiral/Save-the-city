@@ -56,7 +56,13 @@ public class BuildingScript : MonoBehaviour {
         {
             infoDisplay = Instantiate(infoDisplayPrefab, transform.position, Quaternion.identity, transform);
             //infoDisplay.GetComponentInChildren<Button>().onClick.AddListener(CallFireEngine);
-            infoDisplay.GetComponentInChildren<Button>().onClick.AddListener(GameObject.FindGameObjectWithTag("InteractionEvent").GetComponent<EventManagerScript>().NextEvent);
+            EventManagerScript manager = GameObject.FindGameObjectWithTag("InteractionEvent").GetComponent<EventManagerScript>();
+
+            Button button = infoDisplay.transform.GetComponentInChildren<Button>();
+            Debug.Log(button);
+            button.onClick.AddListener(manager.NextEvent);
+            infoDisplay.GetComponent<TrackerUIScript>().LeaveHover();
+
             fire = Instantiate(fireParticlePrefab, gameObject.transform.position, Quaternion.Euler(-90, 0, 0));
         }
 
