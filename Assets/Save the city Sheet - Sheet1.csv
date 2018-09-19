@@ -1,19 +1,19 @@
-ID,Title,Desc,Options,Reaction,Action Taken
-0,Cat stuck up a tree,There is a cat stuck up a tree,Take a squad with a fire engine all dressed up with press,You dressed up for nothing. You get less grants,+10GG
-,,,,Luckily you dressed up. the press was there. They liked your style!,+20GG
-,,,Just send a normal squad,You saved the cat from the tree,+15GG
-,,,,There was press there. If you sent a dressed up engine you would have gotten more grants,+10GG
-,,,Leave the call. The cat can get down by itself,The cat falls off the tree and hurts itself,+0GG
-,,,,The cat gets down from tree by itself,+0GG
-1,Kitchen fire,A small kitchen fire in a restaurant with the worst food in town,Let it burn down,Why would you let it burn down? your job is to put fires out,+0GG
-,,,,The whole town cheered and each gave you some change!,+5GG
-,,,Save the kitchen,The smell of food threw your team off and they couldn't put the fire out,+0GG
-,,,,Because of all the bad food the kitchen went up in flames immedatly and you couldn't save it,+0GG
-,,,Save the restaurant,You managed to save the restaurant,+10GG
-,,,,The owner was not happy becuase you didn't pay for your visit to his shop. You needed to pay him some some of your wages,+5GG
-2,Playground Fire,A park is on fire. What do you save first?,The Playground,You find a child who is stuck under the collapsed playground and one of your men risk their lives to save them,+20GG
-,,,,You stop the playground from burning down,+10GG
-,,,The Field nearby,You manage to get the field fire under control but the rest of the park burns,-5GG
-,,,,You put the the field fire out quickly. You even have time to save the rest of the park,+20GG
-,,,The Forest nearby,You put the fire out but a tree falls down and crushes some equiptment. You need to pay to replace them,-5GG
-,,,,The fire was only a small one which you managed to keep under control,+10GG
+ID,Title,Desc,Options,Reaction,Action Taken,Number,Enum of Action
+0,Cat stuck up a tree,There is a cat stuck up a tree,Take a squad with a fire engine all dressed up with press,You dressed up for nothing. You get less grants,+10GG,10,Money
+,,,,Luckily you dressed up. the press was there. They liked your style!,+20GG,20,Money
+,,,Just send a normal squad,You saved the cat from the tree,+15GG,15,Money
+,,,,There was press there. If you sent a dressed up engine you would have gotten more grants,+10GG,10,Money
+,,,Leave the call. The cat can get down by itself,The cat falls off the tree and hurts itself,+0GG,0,Money
+,,,,The cat gets down from tree by itself,+0GG,0,Money
+1,Kitchen fire,A small kitchen fire in a restaurant with the worst food in town,Let it burn down,Why would you let it burn down? your job is to put fires out,+0GG,0,Money
+,,,,The whole town cheered and each gave you some change!,+5GG,5,Money
+,,,Save the kitchen,The smell of food threw your team off and they couldn't put the fire out,+0GG,0,Money
+,,,,Because of all the bad food the kitchen went up in flames immedatly and you couldn't save it,+0GG,0,Money
+,,,Save the restaurant,You managed to save the restaurant,+10GG,0,Money
+,,,,The owner was not happy becuase you didn't pay for your visit to his shop. You needed to pay him some some of your wages,+5GG,5,Money
+2,Playground Fire,A park is on fire. What do you save first?,The Playground,You find a child who is stuck under the collapsed playground and one of your men risk their lives to save them,+20GG,20,Money
+,,,,You stop the playground from burning down,+10GG,10,Money
+,,,The Field nearby,You manage to get the field fire under control but the rest of the park burns,-5GG,-5,Money
+,,,,You put the the field fire out quickly. You even have time to save the rest of the park,+20GG,20,Money
+,,,The Forest nearby,You put the fire out but a tree falls down and crushes some equiptment. You need to pay to replace them,-5GG,-5,Money
+,,,,The fire was only a small one which you managed to keep under control,+10GG,10,Money
