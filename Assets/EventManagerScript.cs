@@ -72,6 +72,9 @@ public class EventManagerScript : MonoBehaviour {
         Debug.Log(grid[3, currentEvent.reaction1]);
         Debug.Log(grid[3, currentEvent.reaction2]);
 
+        Debug.Log(currentEvent.reaction1Count);
+        Debug.Log(currentEvent.reaction2Count);
+
         //hide the buttons
         buttonsPanel.SetActive(true);
 

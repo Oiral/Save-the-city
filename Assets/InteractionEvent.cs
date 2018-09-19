@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum reactionEnum {Money,Squad}
+
 public class InteractionEvent{
 
     public int positionInCollumn;
@@ -9,13 +11,17 @@ public class InteractionEvent{
 
     public int option1;
     public int reaction1;
+    public reactionEnum reaction1Option;
+    public int reaction1Count;
 
     public int option2;
     public int reaction2;
+    public reactionEnum reaction2Option;
+    public int reaction2Count;
 
 
 
-	public InteractionEvent(int number,string[,]array)
+    public InteractionEvent(int number,string[,]array)
     {
         eventNumber = number;
 
@@ -52,6 +58,28 @@ public class InteractionEvent{
         //Get reaction for option 1
         reaction1 = option1 + (int)Random.Range(0, 2);
         reaction2 = option2 + (int)Random.Range(0, 2);
+
+        reaction1Option = checkReaction(array[6, option1]);
+        reaction2Option = checkReaction(array[6, option2]);
+
+        reaction1Count = System.Convert.ToInt32(array[5, option1]);
+        reaction2Count = System.Convert.ToInt32(array[5, option2]);
+
+    }
+
+    private reactionEnum checkReaction(string input)
+    {
+        reactionEnum returnValue = reactionEnum.Money;
+
+        if (input == "Money")
+        {
+            returnValue = reactionEnum.Money;
+        }
+        if (input == "Squad")
+        {
+            returnValue = reactionEnum.Squad;
+        }
+        return returnValue;
     }
     
 }
