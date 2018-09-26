@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour {
 
     public GameObject firePrefab;
 
+    [HideInInspector]
+    public List<Block> blocksOnFire = new List<Block>();
+
     public void MovePlayer(Corner cornerToMoveTo)
     {
         if (selectedPlayer != null)
@@ -64,6 +67,21 @@ public class GameManager : MonoBehaviour {
         }
 
         //Create a new fire
+        
+        if (blocksOnFire.Count > 2)
+        {
+            SpreadRandomFire();
+        }
+        else
+        {
+            MakeNewFire();
+        }
+
+
+    }
+
+    public void MakeNewFire()
+    {
         //find a empty screen
         List<GameObject> blocks = new List<GameObject>(GameObject.FindGameObjectsWithTag("Blocks"));
 
@@ -75,8 +93,9 @@ public class GameManager : MonoBehaviour {
 
             if (block.onFire == false)
             {
-                block.SetOnFire();
+                
                 lookingForPlace = false;
+                SetBlockOnFire(block);
             }
             blocks.Remove(block.gameObject);
 
@@ -86,7 +105,49 @@ public class GameManager : MonoBehaviour {
                 lookingForPlace = false;
             }
         }
+    }
 
+    public void SpreadRandomFire()
+    {
+        //Pick a random block that is already on fire
+        Block randomBlock = blocksOnFire[Random.Range(0, blocksOnFire.Count)];
+
+        //Pick a random corner from the block
+        List<Corner> eligableCorners = randomBlock.connectedCorners;
+        bool lookingForSpread = true;
+
+        while (lookingForSpread)
+        {
+            Corner randomCorner = eligableCorners[Random.Range(0, randomBlock.connectedCorners.Count)];
+            List<Block> cornerBlocks = randomCorner.connectedBlocks;
+            //remove the random block because we dont want to try spread to the block were spreading from
+            cornerBlocks.Remove(randomBlock);
+            if (cornerBlocks.Count > 0)
+            {
+                //We still have another block to spread too
+                //Pick a random block to spread too now
+                
+                int RandNum = Random.Range(0, cornerBlocks.Count);
+                if (cornerBlocks[RandNum].onFire == false)
+                {
+                    SetBlockOnFire(cornerBlocks[RandNum]);
+                    lookingForSpread = false;
+                }
+                
+            }
+        }
+        
+
+        //Get the connected blocks
+
+
+    }
+
+    public void SetBlockOnFire(Block blockToIgnite)
+    {
+        Debug.Log("Setting Block on fire");
+        blockToIgnite.SetOnFire();
+        blocksOnFire.Add(blockToIgnite);
     }
 
     public void SelectPlayer(CornerMovementScript player)

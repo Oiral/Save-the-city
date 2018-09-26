@@ -14,6 +14,15 @@ public class CornerMovementScript : MonoBehaviour {
 
     public Text actionCounter;
 
+    private void Start()
+    {
+        if (currentCorner == null)
+        {
+            //Find a new corner and set it to the first one
+            currentCorner = GameObject.FindGameObjectWithTag("Corner").GetComponent<Corner>();
+        }
+    }
+
     public void NextCorner(Corner cornerToMove)
     {
         //check if we can move

@@ -15,9 +15,26 @@ public class GenerateLandscape : MonoBehaviour {
 
     public float gridDistance = 1;
 
-    public void Start()
+
+
+    public void Awake()
     {
-        Vector3[,] verticies = new Vector3[xSize , zSize];
+        Generate();
+        
+    }
+
+
+    [ContextMenu("Generate the landscape")]
+
+    public void Generate()
+    {
+        Vector3[,] verticies = new Vector3[xSize, zSize];
+        GameObject[,] corners = new GameObject[xSize, zSize];
+
+        //make a new empty game object for the parents of the corners and blocks
+        GameObject blockParent = Instantiate(new GameObject("Block Parent"), transform);
+
+        GameObject cornerParent = Instantiate(new GameObject("corner Parent"), transform);
 
         for (int x = 0; x < xSize; x++)
         {
@@ -27,34 +44,130 @@ public class GenerateLandscape : MonoBehaviour {
                 {
                     //Spawn in the corner prefab
                     //Debug.Log(Mathf.PerlinNoise(x * scale + seed, z * scale + seed));
-                    Instantiate(cornerPrefab, new Vector3(gridDistance * x, 0, gridDistance * z), Quaternion.identity, transform);
-                    verticies[x,z] = new Vector3(gridDistance * x, 0, gridDistance * z);
+                    corners[x, z] = Instantiate(cornerPrefab, new Vector3(gridDistance * x, 0, gridDistance * z), Quaternion.identity, cornerParent.transform);
+                    verticies[x, z] = new Vector3(gridDistance * x, 0, gridDistance * z);
                 }
             }
         }
+
+        //Generate the links between all the corners
+        for (int x = 0; x < xSize; x++)
+        {
+            for (int z = 0; z < zSize; z++)
+            {
+                Corner currentCorner = corners[x, z].GetComponent<Corner>();
+
+                if (x > 0)
+                {
+                    //Add the x-1 node
+                    currentCorner.connectedCorner.Add(corners[x - 1, z].GetComponent<Corner>());
+                }
+                if (z > 0)
+                {
+                    //Add the z-1 node
+                    currentCorner.connectedCorner.Add(corners[x, z - 1].GetComponent<Corner>());
+                }
+                if (z < zSize - 1)
+                {
+                    //Add the z+1 node
+                    currentCorner.connectedCorner.Add(corners[x, z + 1].GetComponent<Corner>());
+                }
+                if (x < xSize - 1)
+                {
+                    //Add the x+1 node
+                    currentCorner.connectedCorner.Add(corners[x + 1, z].GetComponent<Corner>());
+                }
+
+
+
+
+            }
+        }
+
+
         //Landscape has been generated
         for (int x = 1; x < xSize; x++)
         {
             for (int z = 1; z < zSize; z++)
             {
                 //(a + b + c + d)/4
-                Vector3 avgPos =(
+                Vector3 avgPos = (
                     verticies[x - 1, z - 1] +
-                    verticies[x    , z - 1] +
-                    verticies[x - 1, z    ] +
-                    verticies[x    , z    ])*0.25f;
-                
+                    verticies[x, z - 1] +
+                    verticies[x - 1, z] +
+                    verticies[x, z]) * 0.25f;
 
-                GameObject block = Instantiate(blockPrefab,avgPos,Quaternion.Euler(0,0,180),transform);
+
+                GameObject block = Instantiate(blockPrefab, avgPos, Quaternion.Euler(0, 0, 180), blockParent.transform);
                 Mesh blockMesh = new Mesh();
                 blockMesh = DrawMesh.AddNewQuad(blockMesh, verticies[x, z] - avgPos, verticies[x - 1, z] - avgPos, verticies[x, z - 1] - avgPos, verticies[x - 1, z - 1] - avgPos);
                 block.GetComponent<MeshFilter>().mesh = blockMesh;
                 //block.transform.Rotate(Vector3.forward, 180);
 
                 block.GetComponent<MeshCollider>().sharedMesh = blockMesh;
+
+                //Generate the links to each of the corners the block is attached too
+                block.GetComponent<Block>().connectedCorners = new List<Corner>
+                {
+                    corners[x - 1, z - 1].GetComponent<Corner>(),
+                    corners[x, z - 1].GetComponent<Corner>() ,
+                    corners[x - 1, z].GetComponent<Corner>() ,
+                    corners[x, z].GetComponent<Corner>()
+                };
+
+                //give each corner attached this block to add
+                Block thisBlock = block.GetComponent<Block>();
+                corners[x - 1, z - 1].GetComponent<Corner>().connectedBlocks.Add(thisBlock);
+                corners[x, z - 1].GetComponent<Corner>().connectedBlocks.Add(thisBlock);
+                corners[x - 1, z].GetComponent<Corner>().connectedBlocks.Add(thisBlock);
+                corners[x, z].GetComponent<Corner>().connectedBlocks.Add(thisBlock);
+
+
             }
         }
 
+
+        //Remove some random paths
+        for (int x = 1; x < xSize; x++)
+        {
+            for (int z = 1; z < zSize; z++)
+            {
+                if (Mathf.PerlinNoise(x * scale + seed, z * scale + seed) > 0.5f)
+                {
+                    //Remove the linked corners
+                    foreach (Corner AttachedCorner in corners[x,z].GetComponent<Corner>().connectedCorner)
+                    {
+                        AttachedCorner.connectedCorner.Remove(corners[x, z].GetComponent<Corner>());
+                        //check if the attached corner has no more corners its attached too
+                        if (AttachedCorner.connectedCorner.Count == 0)
+                        {
+                            //Remove the linked blocks from this corner
+                            RemoveLinkedBlocks(AttachedCorner);
+                            Destroy(AttachedCorner.gameObject);
+                        }
+                    }
+
+                    RemoveLinkedBlocks(corners[x, z].GetComponent<Corner>());
+
+                    Destroy(corners[x, z].gameObject);
+                }
+            }
+        }
     }
+
+    void RemoveLinkedBlocks(Corner corner)
+    {
+        //Remove the linked Blocks
+        foreach (Block AttachedBlock in corner.connectedBlocks)
+        {
+            AttachedBlock.connectedCorners.Remove(corner);
+            //if the attached block now has no more corners destry that block
+            if (AttachedBlock.connectedCorners.Count <= 2)
+            {
+                Destroy(AttachedBlock.gameObject);
+            }
+        }
+    }
+    
     
 }

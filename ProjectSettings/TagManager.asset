@@ -8,6 +8,7 @@ TagManager:
   - InteractionEvent
   - GameManager
   - Blocks
+  - Corner
   layers:
   - Default
   - TransparentFX

@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114807331557715122}
   m_Layer: 0
   m_Name: Corner
-  m_TagString: Untagged
+  m_TagString: Corner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,9 +108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e97a873aa9f29ed4589e519bfb4ed416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedBlocks:
-  - {fileID: 0}
-  connectedCorner:
-  - {fileID: 0}
-  - {fileID: 0}
+  connectedBlocks: []
+  connectedCorner: []
   blocked: 0
