@@ -109,5 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectedBlocks: []
-  connectedCorner: []
+  connectedCorners: []
+  streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
+    type: 2}
   blocked: 0

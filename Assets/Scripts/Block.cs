@@ -19,7 +19,7 @@ public class Block : MonoBehaviour {
     {
         onFire = true;
         //Spawn in fire
-        fire = Instantiate(GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().firePrefab,transform.position,Quaternion.Euler(0,0,90), transform);
+        fire = Instantiate(GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().firePrefab,transform.position,Quaternion.Euler(-90,0,0), transform);
     }
     public void RemoveFire()
     {

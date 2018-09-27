@@ -240,9 +240,10 @@ MonoBehaviour:
     type: 2}
   xSize: 10
   zSize: 10
-  scale: 0.9
-  seed: 15
+  scale: 0.8
+  seed: 2
   gridDistance: 2
+  removeChance: 0.55
 --- !u!1001 &553483500
 Prefab:
   m_ObjectHideFlags: 0

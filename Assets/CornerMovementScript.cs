@@ -30,7 +30,7 @@ public class CornerMovementScript : MonoBehaviour {
         {
             cornerToMove.UnBlockCorner();
             actionPoints -= 2;
-        } else if (currentCorner.connectedCorner.Contains(cornerToMove) && actionPoints > 0 && cornerToMove.blocked == false)
+        } else if (currentCorner.connectedCorners.Contains(cornerToMove) && actionPoints > 0 && cornerToMove.blocked == false)
         {
             currentCorner = cornerToMove;
             actionPoints -= 1;

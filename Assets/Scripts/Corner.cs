@@ -6,7 +6,9 @@ public class Corner : MonoBehaviour {
 
     public List<Block> connectedBlocks;
 
-    public List<Corner> connectedCorner;
+    public List<Corner> connectedCorners;
+
+    public GameObject streetPrefab;
 
     public bool blocked = false;
 
@@ -24,5 +26,21 @@ public class Corner : MonoBehaviour {
     {
         blocked = false;
         GetComponent<MeshRenderer>().material = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().selectedMat;
+    }
+
+    public void Start()
+    {
+        //Spawn in the roads
+        foreach (Corner connectedCorner in connectedCorners)
+        {
+            GameObject street = Instantiate(streetPrefab, transform.position, Quaternion.identity, transform);
+            //make the street look at the connected corner
+            street.transform.LookAt(connectedCorner.transform.position, Vector3.up);
+
+            //Resize the scale of the street
+            Vector3 scale = street.transform.localScale;
+            scale.z = Vector3.Distance(transform.position, connectedCorner.transform.position);
+            street.transform.localScale = scale;
+        }
     }
 }

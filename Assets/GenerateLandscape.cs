@@ -15,6 +15,8 @@ public class GenerateLandscape : MonoBehaviour {
 
     public float gridDistance = 1;
 
+    [Range(0,1)]
+    public float removeChance;
 
 
     public void Awake()
@@ -60,22 +62,22 @@ public class GenerateLandscape : MonoBehaviour {
                 if (x > 0)
                 {
                     //Add the x-1 node
-                    currentCorner.connectedCorner.Add(corners[x - 1, z].GetComponent<Corner>());
+                    currentCorner.connectedCorners.Add(corners[x - 1, z].GetComponent<Corner>());
                 }
                 if (z > 0)
                 {
                     //Add the z-1 node
-                    currentCorner.connectedCorner.Add(corners[x, z - 1].GetComponent<Corner>());
+                    currentCorner.connectedCorners.Add(corners[x, z - 1].GetComponent<Corner>());
                 }
                 if (z < zSize - 1)
                 {
                     //Add the z+1 node
-                    currentCorner.connectedCorner.Add(corners[x, z + 1].GetComponent<Corner>());
+                    currentCorner.connectedCorners.Add(corners[x, z + 1].GetComponent<Corner>());
                 }
                 if (x < xSize - 1)
                 {
                     //Add the x+1 node
-                    currentCorner.connectedCorner.Add(corners[x + 1, z].GetComponent<Corner>());
+                    currentCorner.connectedCorners.Add(corners[x + 1, z].GetComponent<Corner>());
                 }
 
 
@@ -132,14 +134,14 @@ public class GenerateLandscape : MonoBehaviour {
         {
             for (int z = 1; z < zSize; z++)
             {
-                if (Mathf.PerlinNoise(x * scale + seed, z * scale + seed) > 0.5f)
+                if (Mathf.PerlinNoise((x * scale) + seed, (z * scale) + seed) > removeChance)
                 {
                     //Remove the linked corners
-                    foreach (Corner AttachedCorner in corners[x,z].GetComponent<Corner>().connectedCorner)
+                    foreach (Corner AttachedCorner in corners[x,z].GetComponent<Corner>().connectedCorners)
                     {
-                        AttachedCorner.connectedCorner.Remove(corners[x, z].GetComponent<Corner>());
+                        AttachedCorner.connectedCorners.Remove(corners[x, z].GetComponent<Corner>());
                         //check if the attached corner has no more corners its attached too
-                        if (AttachedCorner.connectedCorner.Count == 0)
+                        if (AttachedCorner.connectedCorners.Count == 0)
                         {
                             //Remove the linked blocks from this corner
                             RemoveLinkedBlocks(AttachedCorner);
@@ -164,6 +166,11 @@ public class GenerateLandscape : MonoBehaviour {
             //if the attached block now has no more corners destry that block
             if (AttachedBlock.connectedCorners.Count <= 2)
             {
+                foreach (Corner attachedCorner in AttachedBlock.connectedCorners)
+                {
+                    attachedCorner.connectedBlocks.Remove(AttachedBlock);
+                }
+
                 Destroy(AttachedBlock.gameObject);
             }
         }
