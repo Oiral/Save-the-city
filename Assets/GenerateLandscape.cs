@@ -25,9 +25,7 @@ public class GenerateLandscape : MonoBehaviour {
         
     }
 
-
     [ContextMenu("Generate the landscape")]
-
     public void Generate()
     {
         Vector3[,] verticies = new Vector3[xSize, zSize];
@@ -47,6 +45,7 @@ public class GenerateLandscape : MonoBehaviour {
                     //Spawn in the corner prefab
                     //Debug.Log(Mathf.PerlinNoise(x * scale + seed, z * scale + seed));
                     corners[x, z] = Instantiate(cornerPrefab, new Vector3(gridDistance * x, 0, gridDistance * z), Quaternion.identity, cornerParent.transform);
+
                     verticies[x, z] = new Vector3(gridDistance * x, 0, gridDistance * z);
                 }
             }
@@ -80,13 +79,12 @@ public class GenerateLandscape : MonoBehaviour {
                     currentCorner.connectedCorners.Add(corners[x + 1, z].GetComponent<Corner>());
                 }
 
-
-
-
             }
         }
 
 
+
+        List<Block> generatedBlocks = new List<Block>();
         //Landscape has been generated
         for (int x = 1; x < xSize; x++)
         {
@@ -101,8 +99,11 @@ public class GenerateLandscape : MonoBehaviour {
 
 
                 GameObject block = Instantiate(blockPrefab, avgPos, Quaternion.Euler(0, 0, 180), blockParent.transform);
+
                 Mesh blockMesh = new Mesh();
+
                 blockMesh = DrawMesh.AddNewQuad(blockMesh, verticies[x, z] - avgPos, verticies[x - 1, z] - avgPos, verticies[x, z - 1] - avgPos, verticies[x - 1, z - 1] - avgPos);
+
                 block.GetComponent<MeshFilter>().mesh = blockMesh;
                 //block.transform.Rotate(Vector3.forward, 180);
 
@@ -124,10 +125,27 @@ public class GenerateLandscape : MonoBehaviour {
                 corners[x - 1, z].GetComponent<Corner>().connectedBlocks.Add(thisBlock);
                 corners[x, z].GetComponent<Corner>().connectedBlocks.Add(thisBlock);
 
+                generatedBlocks.Add(thisBlock);
 
             }
         }
 
+        
+        //Generate all the links to the neighboring blocks
+        foreach (Block currentBlock in generatedBlocks)
+        {
+            
+            foreach (Corner corner in currentBlock.connectedCorners)
+            {
+                foreach (Block connectTo in corner.connectedBlocks)
+                {
+                    if (connectTo != currentBlock && !currentBlock.connectedBlocks.Contains(connectTo))
+                    {
+                            currentBlock.connectedBlocks.Add(connectTo);
+                    }
+                }
+            }
+        }
 
         //Remove some random paths
         for (int x = 1; x < xSize; x++)
@@ -163,7 +181,7 @@ public class GenerateLandscape : MonoBehaviour {
         foreach (Block AttachedBlock in corner.connectedBlocks)
         {
             AttachedBlock.connectedCorners.Remove(corner);
-            //if the attached block now has no more corners destry that block
+            //if the attached block now has no more corners destroy that block
             if (AttachedBlock.connectedCorners.Count <= 2)
             {
                 foreach (Corner attachedCorner in AttachedBlock.connectedCorners)
@@ -171,10 +189,14 @@ public class GenerateLandscape : MonoBehaviour {
                     attachedCorner.connectedBlocks.Remove(AttachedBlock);
                 }
 
+                //Remove each connected block
+                foreach (Block connectedBlock in AttachedBlock.connectedBlocks)
+                {
+                    connectedBlock.connectedBlocks.Remove(AttachedBlock);
+                }
+
                 Destroy(AttachedBlock.gameObject);
             }
         }
     }
-    
-    
 }

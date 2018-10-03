@@ -6,7 +6,7 @@ public class DrawMesh : MonoBehaviour {
 
 	public static Mesh AddNewQuad(Mesh mesh,Vector3 vertex1,Vector3 vertex2,Vector3 vertex3,Vector3 vertex4)
     {
-        Debug.Log("Adding new quad");
+        //Debug.Log("Adding new quad");
         Vector3[] verts = new Vector3[mesh.vertexCount + 4];
         int[] tris = new int[mesh.triangles.Length + 6];
 

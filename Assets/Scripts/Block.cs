@@ -6,6 +6,8 @@ public class Block : MonoBehaviour {
 
     public List<Corner> connectedCorners;
 
+    public List<Block> connectedBlocks;
+
     public bool onFire;
 
     public GameObject fire;
