@@ -14,7 +14,7 @@ public class Corner : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().MovePlayer(this);
+        GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().CheckCorner(this);
     }
 
     public void BlockCorner()

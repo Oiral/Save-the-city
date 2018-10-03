@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-    public CornerMovementScript selectedPlayer;
+    public PlayerMovementScript selectedPlayer;
 
     public Material selectedMat;
     public Material unSelectedMat;
@@ -14,45 +14,56 @@ public class GameManager : MonoBehaviour {
     [HideInInspector]
     public List<Block> blocksOnFire = new List<Block>();
 
-    public void MovePlayer(Corner cornerToMoveTo)
+    public void CheckCorner(Corner cornerToCheck)
     {
         if (selectedPlayer != null)
         {
-            selectedPlayer.NextCorner(cornerToMoveTo);
+            if (selectedPlayer.movementType == MovementType.Corner)
+            {
+                selectedPlayer.MovePlayer(cornerToCheck);
+            }
         }
     }
 
     public void CheckBlock(Block blockToCheck)
     {
-        if (selectedPlayer.CanRemoveFire(blockToCheck))
+        if (selectedPlayer != null)
         {
-            blockToCheck.RemoveFire();
-            //set a corner to be disabled
-            //Pick a random corner
-
-            List<Corner> corners = blockToCheck.connectedCorners;
-
-            bool lookingForPlace = true;
-            while (lookingForPlace)
+            if (selectedPlayer.CanRemoveFire(blockToCheck))
             {
-                int randnum = Random.Range(0, corners.Count);
-                Corner corner = corners[randnum].GetComponent<Corner>();
+                blockToCheck.RemoveFire();
+                //set a corner to be disabled
+                //Pick a random corner
 
-                if (corner.blocked == false)
-                {
-                    corner.BlockCorner();
-                    corner.GetComponent<MeshRenderer>().material = unSelectedMat;
-                    lookingForPlace = false;
-                }
-                corners.Remove(corner);
+                List<Corner> corners = blockToCheck.connectedCorners;
 
-                //check if all are full
-                if (corners.Count == 0)
+                bool lookingForPlace = true;
+                while (lookingForPlace)
                 {
-                    lookingForPlace = false;
+                    int randnum = Random.Range(0, corners.Count);
+                    Corner corner = corners[randnum].GetComponent<Corner>();
+
+                    if (corner.blocked == false)
+                    {
+                        corner.BlockCorner();
+                        corner.GetComponent<MeshRenderer>().material = unSelectedMat;
+                        lookingForPlace = false;
+                    }
+                    corners.Remove(corner);
+
+                    //check if all are full
+                    if (corners.Count == 0)
+                    {
+                        lookingForPlace = false;
+                    }
                 }
+            }else if (selectedPlayer.movementType == MovementType.Block)
+            {
+                selectedPlayer.MovePlayer(blockToCheck);
             }
         }
+
+        
     }
 
 	public void NextTurn()
@@ -63,7 +74,7 @@ public class GameManager : MonoBehaviour {
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         for (int i = 0; i < players.Length; i++)
         {
-            players[i].GetComponent<CornerMovementScript>().ResetActionPoints();
+            players[i].GetComponent<PlayerMovementScript>().ResetActionPoints();
         }
 
         //Create a new fire
@@ -150,7 +161,7 @@ public class GameManager : MonoBehaviour {
         blocksOnFire.Add(blockToIgnite);
     }
 
-    public void SelectPlayer(CornerMovementScript player)
+    public void SelectPlayer(PlayerMovementScript player)
     {
         if (selectedPlayer != null)
         {
