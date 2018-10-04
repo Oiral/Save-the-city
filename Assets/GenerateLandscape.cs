@@ -163,13 +163,13 @@ public class GenerateLandscape : MonoBehaviour {
                         {
                             //Remove the linked blocks from this corner
                             RemoveLinkedBlocks(AttachedCorner);
-                            Destroy(AttachedCorner.gameObject);
+                            DestroyImmediate(AttachedCorner.gameObject);
                         }
                     }
 
                     RemoveLinkedBlocks(corners[x, z].GetComponent<Corner>());
 
-                    Destroy(corners[x, z].gameObject);
+                    DestroyImmediate(corners[x, z].gameObject);
                 }
             }
         }
@@ -195,7 +195,7 @@ public class GenerateLandscape : MonoBehaviour {
                     connectedBlock.connectedBlocks.Remove(AttachedBlock);
                 }
 
-                Destroy(AttachedBlock.gameObject);
+                DestroyImmediate(AttachedBlock.gameObject);
             }
         }
     }
