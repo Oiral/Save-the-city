@@ -10,6 +10,18 @@ public class Fire : MonoBehaviour {
 
     public GameObject adjacentPrefab;
 
+    public static List<Fire> fires = new List<Fire>();
+
+    public Block blockToLight;
+
+    private void Awake()
+    {
+        if (!fires.Contains(this))
+        {
+            fires.Add(this);
+        }
+    }
+
     private void Start()
     {
         GameObject[] objects = GameObject.FindGameObjectsWithTag("Blocks");
@@ -29,13 +41,17 @@ public class Fire : MonoBehaviour {
             if (!blocksOnFire.Contains(addBlock))
             {
                 adjacentBlocks.Add(addBlock);
-                Instantiate(adjacentPrefab, addBlock.transform.position, Quaternion.identity, transform);
+                //Instantiate(adjacentPrefab, addBlock.transform.position, Quaternion.identity, transform);
             }
         }
     }
 
     public void ExpandFire()
     {
+        if (blockToLight != null)
+        {
+
+        }
         //Pick a random adjacent block
         Block randomAdjacent = adjacentBlocks[Random.Range(0, adjacentBlocks.Count)];
 
@@ -53,6 +69,12 @@ public class Fire : MonoBehaviour {
         randomAdjacent.SetOnFire();
     }
 
+    public void LightFire(Block blockToLight)
+    {
+        //add the random block to the fire
+        blocksOnFire.Add(blockToLight);
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.S))
@@ -60,4 +82,10 @@ public class Fire : MonoBehaviour {
             ExpandFire();
         }
     }
+
+
+    //Pick and random block to ignite
+    //Show the player its going to ignite
+    
+    //Next click light the current one on fire
 }
