@@ -18,11 +18,14 @@ public class GenerateLandscape : MonoBehaviour {
     [Range(0,1)]
     public float removeChance;
 
+    public bool generateOnStart = false;
 
     public void Awake()
     {
-        Generate();
-        
+        if (generateOnStart)
+        {
+            Generate();
+        }
     }
 
     [ContextMenu("Generate the landscape")]

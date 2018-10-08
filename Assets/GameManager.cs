@@ -11,6 +11,10 @@ public class GameManager : MonoBehaviour {
 
     public GameObject firePrefab;
 
+    public List<GameObject> pumps;
+
+    public GameObject loseCanvas;
+
     [HideInInspector]
     public List<Block> blocksOnFire = new List<Block>();
 
@@ -172,5 +176,19 @@ public class GameManager : MonoBehaviour {
         //select the player
         selectedPlayer = player;
         selectedPlayer.gameObject.GetComponent<MeshRenderer>().material = selectedMat;
+    }
+
+    public void LosePump(GameObject pumpToLose)
+    {
+        pumps.Remove(pumpToLose);
+        if (pumps.Count <= 0)
+        {
+            LoseGame();
+        }
+    }
+
+    public void LoseGame()
+    {
+        loseCanvas.SetActive(true);
     }
 }
