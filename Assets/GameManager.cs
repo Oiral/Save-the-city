@@ -4,6 +4,23 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
+    #region Singleton
+
+    public static GameManager instance;
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }else if (instance != this)
+        {
+            Destroy(this);
+        }
+    }
+
+    #endregion
+
+
     public PlayerMovementScript selectedPlayer;
 
     public Material selectedMat;
@@ -11,9 +28,11 @@ public class GameManager : MonoBehaviour {
 
     public GameObject firePrefab;
 
-    public List<GameObject> pumps;
+    public List<Pump> pumps;
+    public List<Fire> fires;
 
     public GameObject loseCanvas;
+    public GameObject winCanvas;
 
     [HideInInspector]
     public List<Block> blocksOnFire = new List<Block>();
@@ -82,7 +101,8 @@ public class GameManager : MonoBehaviour {
         }
 
         //Create a new fire
-        
+
+        /*
         if (blocksOnFire.Count > 2)
         {
             SpreadRandomFire();
@@ -90,8 +110,11 @@ public class GameManager : MonoBehaviour {
         else
         {
             MakeNewFire();
-        }
+        }*/
 
+        //Spread the fire
+        fires[0].ExpandFire();
+        fires[0].ExpandFire();
 
     }
 
@@ -178,7 +201,7 @@ public class GameManager : MonoBehaviour {
         selectedPlayer.gameObject.GetComponent<MeshRenderer>().material = selectedMat;
     }
 
-    public void LosePump(GameObject pumpToLose)
+    public void LosePump(Pump pumpToLose)
     {
         pumps.Remove(pumpToLose);
         if (pumps.Count <= 0)
@@ -190,5 +213,10 @@ public class GameManager : MonoBehaviour {
     public void LoseGame()
     {
         loseCanvas.SetActive(true);
+    }
+
+    public void LoseInfernoTower()
+    {
+        winCanvas.SetActive(true);
     }
 }

@@ -36,14 +36,18 @@ public class PlayerMovementScript : MonoBehaviour {
     public void MovePlayer(Corner cornerToMove)
     {
         //check if we can move
-        if (cornerToMove.blocked == true && actionPoints >= 2)
+        if (cornerToMove.movable == true)
         {
-            cornerToMove.UnBlockCorner();
-            actionPoints -= 2;
-        } else if (currentCorner.connectedCorners.Contains(cornerToMove) && actionPoints > 0 && cornerToMove.blocked == false)
-        {
-            currentCorner = cornerToMove;
-            actionPoints -= 1;
+            if (cornerToMove.blocked == true && actionPoints >= 2)
+            {
+                cornerToMove.UnBlockCorner();
+                actionPoints -= 2;
+            }
+            else if (currentCorner.connectedCorners.Contains(cornerToMove) && actionPoints > 0 && cornerToMove.blocked == false)
+            {
+                currentCorner = cornerToMove;
+                actionPoints -= 1;
+            }
         }
     }
     public void MovePlayer(Block blockToMove)

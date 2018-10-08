@@ -12,7 +12,7 @@ public class Fire : MonoBehaviour {
 
     public static List<Fire> fires = new List<Fire>();
 
-    public Block blockToLight;
+    public Block startingBlock;
 
     private void Awake()
     {
@@ -24,8 +24,10 @@ public class Fire : MonoBehaviour {
 
     private void Start()
     {
-        GameObject[] objects = GameObject.FindGameObjectsWithTag("Blocks");
-        blocksOnFire.Add( objects[15].GetComponent<Block>());
+        transform.position = startingBlock.transform.position;
+        blocksOnFire.Add(startingBlock);
+
+        startingBlock.infernoTower = this;
 
         foreach (Block block in blocksOnFire)
         {
@@ -48,10 +50,6 @@ public class Fire : MonoBehaviour {
 
     public void ExpandFire()
     {
-        if (blockToLight != null)
-        {
-
-        }
         //Pick a random adjacent block
         Block randomAdjacent = adjacentBlocks[Random.Range(0, adjacentBlocks.Count)];
 
@@ -73,6 +71,25 @@ public class Fire : MonoBehaviour {
     {
         //add the random block to the fire
         blocksOnFire.Add(blockToLight);
+    }
+
+    public void RemoveBlock(Block blockToRemove)
+    {
+        foreach (Block connectBlock in blockToRemove.connectedBlocks)
+        {
+            //Remove each case of this adjacent block
+            if (adjacentBlocks.Contains(connectBlock))
+            {
+                adjacentBlocks.Remove(connectBlock);
+            }
+            //check if any blocks around are on fire
+            if (connectBlock.onFire)
+            {
+                //add to the adjacent block
+                adjacentBlocks.Add(blockToRemove);
+            }
+        }
+        blocksOnFire.Remove(blockToRemove);
     }
 
     private void Update()

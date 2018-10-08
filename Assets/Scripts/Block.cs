@@ -12,21 +12,40 @@ public class Block : MonoBehaviour {
 
     public GameObject fire;
 
+    public Pump attachedPump;
+
+    public Fire infernoTower;
+
+    public bool blockerOnBlock;
+
     private void OnMouseDown()
     {
-        GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().CheckBlock(this);
+        GameManager.instance.CheckBlock(this);
     }
 
     public void SetOnFire()
     {
         onFire = true;
         //Spawn in fire
-        fire = Instantiate(GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().firePrefab,transform.position,Quaternion.Euler(-90,0,0), transform);
+        fire = Instantiate(GameManager.instance.firePrefab,transform.position,Quaternion.Euler(-90,0,0), transform);
+        //If there is an attached pump
+        if (attachedPump != null)
+        {
+            //There is a pump attached to this block
+            //Remove it from the gamemanager
+            GameManager.instance.LosePump(attachedPump);
+        }
+        
     }
     public void RemoveFire()
     {
         onFire = false;
         Destroy(fire);
-        GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().blocksOnFire.Remove(this);
+        GameManager.instance.fires[0].RemoveBlock(this);
+
+        if (infernoTower != null)
+        {
+            GameManager.instance.LoseInfernoTower();
+        }
     }
 }

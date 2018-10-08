@@ -12,6 +12,8 @@ public class Corner : MonoBehaviour {
 
     public bool blocked = false;
 
+    public bool movable = true;
+
     private void OnMouseDown()
     {
         GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().CheckCorner(this);
@@ -26,6 +28,22 @@ public class Corner : MonoBehaviour {
     {
         blocked = false;
         GetComponent<MeshRenderer>().material = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().selectedMat;
+    }
+
+    private void Update()
+    {
+        bool allConnectedBlockOnFire = true;
+
+        foreach (Block block in connectedBlocks)
+        {
+            if (block.onFire == false)
+            {
+                allConnectedBlockOnFire = false;
+            }
+        }
+
+        movable = !allConnectedBlockOnFire;
+        
     }
 
     public void Start()
