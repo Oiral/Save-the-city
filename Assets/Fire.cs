@@ -53,6 +53,12 @@ public class Fire : MonoBehaviour {
         //Pick a random adjacent block
         Block randomAdjacent = adjacentBlocks[Random.Range(0, adjacentBlocks.Count)];
 
+        if (randomAdjacent.blockerOnBlock)
+        {
+            ExpandFire();
+            return;
+        }
+
         //Remove each count of random adjacent from adjacent blocks
         while (adjacentBlocks.Contains(randomAdjacent))
         {

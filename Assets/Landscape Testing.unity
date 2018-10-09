@@ -296,6 +296,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &31123598
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -696,6 +697,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &87986244
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -807,6 +809,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &98823101
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1211,6 +1214,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &120035204
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1321,6 +1325,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &124605776
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1433,6 +1438,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &131443867
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1541,6 +1547,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &131529824
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1748,6 +1755,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &155240027
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1856,6 +1864,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &156194085
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1966,6 +1975,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &164946336
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2079,6 +2089,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &165995446
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2565,6 +2576,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &211600830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2756,6 +2768,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &222122144
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3011,6 +3024,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &231068563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3116,6 +3130,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &231771750
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3221,6 +3236,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &244239373
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3332,6 +3348,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &248846504
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3643,6 +3660,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &307044450
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3751,6 +3769,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &307318206
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3858,6 +3877,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &317491923
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3963,6 +3983,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &320560459
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4074,6 +4095,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &340311251
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4334,6 +4356,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &353430926
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4446,6 +4469,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &365621572
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4560,6 +4584,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &370290432
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4670,6 +4695,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &383541242
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4866,6 +4892,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &414504608
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5123,6 +5150,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &453358592
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5232,6 +5260,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &495704402
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5340,6 +5369,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &504311043
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5455,6 +5485,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &509563675
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5567,6 +5598,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &525168785
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5676,6 +5708,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &544200989
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5851,6 +5884,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &559264822
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6103,6 +6137,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &588002195
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6207,6 +6242,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &591447995
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6762,7 +6798,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1522707751647804, guid: 53069f6310c2002459960956bf9ef03c, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114111105462445484, guid: 53069f6310c2002459960956bf9ef03c,
         type: 2}
@@ -6816,6 +6852,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &637513805
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6922,6 +6959,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &651175817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7030,6 +7068,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &663761664
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7139,6 +7178,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &667838892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7349,6 +7389,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &698163209
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7459,6 +7500,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &705560992
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7863,6 +7905,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &732154723
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7970,6 +8013,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &737288104
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8079,6 +8123,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &743565608
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8340,6 +8385,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &761417785
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8451,6 +8497,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &765917029
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8563,6 +8610,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &784223551
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8671,6 +8719,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &787757283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8777,6 +8826,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &805315114
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8884,6 +8934,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &824337232
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9145,6 +9196,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &852309577
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9407,6 +9459,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &868888502
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10047,6 +10100,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &950988586
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10156,6 +10210,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &967407936
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10262,6 +10317,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &975755883
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10646,7 +10702,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 988704366}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 0, z: 15}
+  m_LocalPosition: {x: 13, y: 0, z: 9}
   m_LocalScale: {x: 1, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10667,7 +10723,7 @@ MonoBehaviour:
   adjacentBlocks: []
   adjacentPrefab: {fileID: 1891856366264316, guid: b4c6bbdae2c893e4e863d6c87049d76b,
     type: 2}
-  startingBlock: {fileID: 165995445}
+  startingBlock: {fileID: 852309576}
 --- !u!23 &988704369
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10751,6 +10807,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1007025813
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10857,6 +10914,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1010339637
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10968,6 +11026,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &1024241993
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11080,6 +11139,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &1027948766
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11335,6 +11395,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1037388599
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11595,6 +11656,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &1052787803
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11707,6 +11769,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &1053257872
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11815,6 +11878,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1063976004
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11928,6 +11992,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &1073062610
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12185,6 +12250,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1077451609
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12292,6 +12358,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1084411871
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12396,6 +12463,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1087255515
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12502,6 +12570,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1094367644
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12638,6 +12707,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &1108173569
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12895,6 +12965,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1175047072
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13069,6 +13140,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1217576584
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13177,6 +13249,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &1220112910
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13289,6 +13362,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &1227757574
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13398,6 +13472,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1227907790
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14265,6 +14340,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1260331641
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14376,6 +14452,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &1268125082
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14488,6 +14565,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &1272332553
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14747,6 +14825,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &1299070956
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -15293,6 +15372,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1353466386
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15403,6 +15483,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &1386004090
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -15950,6 +16031,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1413665020
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16205,6 +16287,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &1471117748
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16460,6 +16543,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1497500874
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17149,6 +17233,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1598444778
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17255,6 +17340,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1601384263
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17373,6 +17459,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1608347476
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17466,6 +17553,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1609316145
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17572,6 +17660,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1609577158
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17683,6 +17772,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &1630717855
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -17794,6 +17884,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &1637043639
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18052,6 +18143,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &1644673730
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18166,6 +18258,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &1651534123
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18280,6 +18373,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &1672770217
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18457,6 +18551,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1691365981
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18657,6 +18752,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1704662409
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18765,6 +18861,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1764945249
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18870,6 +18967,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1781375610
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18980,6 +19078,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &1790688830
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19093,6 +19192,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &1818577203
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19201,6 +19301,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1826283339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19309,6 +19410,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1841018024
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19567,6 +19669,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &1871836423
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19674,6 +19777,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1895665717
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19784,6 +19888,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1902718084
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20037,6 +20142,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1912952260
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20147,6 +20253,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1916923718
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20400,6 +20507,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1934109011
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20511,6 +20619,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &1967208453
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -20621,6 +20730,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1971970035
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20725,6 +20835,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1981693068
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21059,6 +21170,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &1995334209
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21169,6 +21281,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &2000885774
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21274,6 +21387,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &2009383480
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21381,6 +21495,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &2014213201
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21485,6 +21600,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &2037335406
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21597,6 +21713,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &2039488833
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -21708,6 +21825,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &2039537695
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21815,6 +21933,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &2045644093
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21922,6 +22041,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &2083871601
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22032,6 +22152,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &2091082907
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -22141,6 +22262,7 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
 --- !u!65 &2114889361
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22252,6 +22374,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &2116652977
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -22508,6 +22631,7 @@ MonoBehaviour:
   fire: {fileID: 0}
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
+  blockerOnBlock: 0
 --- !u!64 &2129160942
 MeshCollider:
   m_ObjectHideFlags: 0

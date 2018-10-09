@@ -55,6 +55,8 @@ public class PlayerMovementScript : MonoBehaviour {
         //check if we can move
         if (currentBlock.connectedBlocks.Contains(blockToMove) && actionPoints > 0)
         {
+            currentBlock.blockerOnBlock = false;
+            blockToMove.blockerOnBlock = true;
             currentBlock = blockToMove;
             actionPoints -= 1;
         }
