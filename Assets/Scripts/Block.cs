@@ -14,7 +14,7 @@ public class Block : MonoBehaviour {
 
     public Pump attachedPump;
 
-    public Fire infernoTower;
+    public InfernoTower infernoTower;
 
     public bool blockerOnBlock;
 
@@ -41,11 +41,17 @@ public class Block : MonoBehaviour {
     {
         onFire = false;
         Destroy(fire);
-        GameManager.instance.fires[0].RemoveBlock(this);
+        GameManager.instance.fire.RemoveBlock(this);
 
+        
         if (infernoTower != null)
         {
-            GameManager.instance.LoseInfernoTower();
+            GameManager.instance.infernoTowers.Remove(infernoTower);
+            //If there is no more inferno towers
+            if (GameManager.instance.infernoTowers.Count <= 0)
+            {
+                GameManager.instance.winCanvas.SetActive(true);
+            }
         }
     }
 }

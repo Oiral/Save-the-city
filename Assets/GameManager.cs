@@ -29,7 +29,9 @@ public class GameManager : MonoBehaviour {
     public GameObject firePrefab;
 
     public List<Pump> pumps;
-    public List<Fire> fires;
+    public Fire fire;
+
+    public List<InfernoTower> infernoTowers;
 
     public GameObject loseCanvas;
     public GameObject winCanvas;
@@ -55,6 +57,7 @@ public class GameManager : MonoBehaviour {
             if (selectedPlayer.CanRemoveFire(blockToCheck))
             {
                 blockToCheck.RemoveFire();
+
                 //set a corner to be disabled
                 //Pick a random corner
 
@@ -113,9 +116,12 @@ public class GameManager : MonoBehaviour {
         }*/
 
         //Spread the fire
-        fires[0].ExpandFire();
-        fires[0].ExpandFire();
-
+        foreach (InfernoTower tower in infernoTowers)
+        {
+            fire.ExpandFire();
+        }
+        Debug.Log(infernoTowers.Count);
+    
     }
 
     public void MakeNewFire()

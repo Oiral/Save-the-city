@@ -10,24 +10,14 @@ public class Fire : MonoBehaviour {
 
     public GameObject adjacentPrefab;
 
-    public static List<Fire> fires = new List<Fire>();
-
-    public Block startingBlock;
-
-    private void Awake()
-    {
-        if (!fires.Contains(this))
-        {
-            fires.Add(this);
-        }
-    }
-
     private void Start()
     {
-        transform.position = startingBlock.transform.position;
-        blocksOnFire.Add(startingBlock);
+        GameManager.instance.fire = this;
 
-        startingBlock.infernoTower = this;
+        foreach (InfernoTower towers in GameManager.instance.infernoTowers)
+        {
+            blocksOnFire.Add(towers.attachedBlock);
+        }
 
         foreach (Block block in blocksOnFire)
         {
@@ -67,6 +57,12 @@ public class Fire : MonoBehaviour {
 
         //add the random block to the fire
         blocksOnFire.Add(randomAdjacent);
+
+        //If its the inferno tower
+        if (randomAdjacent.infernoTower != null)
+        {
+            GameManager.instance.infernoTowers.Add(randomAdjacent.infernoTower);
+        }
 
         //add each adjacent block of random adjacent to our adjacent blocks
         AddAdjacentBlocks(randomAdjacent.connectedBlocks);

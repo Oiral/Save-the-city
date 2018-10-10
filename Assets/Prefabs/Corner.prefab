@@ -38,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1311761275721574}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.4980574, y: 2.415121, z: -4.855598}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -113,3 +113,4 @@ MonoBehaviour:
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
+  movable: 1
