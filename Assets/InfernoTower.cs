@@ -6,7 +6,7 @@ public class InfernoTower : MonoBehaviour {
 
     public Block attachedBlock;
 
-    private void Start()
+    private void Awake()
     {
         GameManager.instance.infernoTowers.Add(this);
         attachedBlock.infernoTower = this;

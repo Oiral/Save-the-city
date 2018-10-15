@@ -116,10 +116,7 @@ public class GameManager : MonoBehaviour {
         }*/
 
         //Spread the fire
-        foreach (InfernoTower tower in infernoTowers)
-        {
-            fire.ExpandFire();
-        }
+        fire.ExpandFire();
         Debug.Log(infernoTowers.Count);
     
     }

@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23458772823472316}
   - component: {fileID: 64312512408941992}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Adjacent Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,7 +92,7 @@ MeshCollider:
   m_GameObject: {fileID: 1891856366264316}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
