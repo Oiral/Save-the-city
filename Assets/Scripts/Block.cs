@@ -18,6 +18,8 @@ public class Block : MonoBehaviour {
 
     public bool blockerOnBlock;
 
+    public PlayerMovementScript attachedPlayer;
+
     private void OnMouseDown()
     {
         GameManager.instance.CheckBlock(this);

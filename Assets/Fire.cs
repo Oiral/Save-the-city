@@ -98,6 +98,12 @@ public class Fire : MonoBehaviour {
                 AddAdjacentBlocks(marker.attachedBlock.connectedBlocks);
                 marker.attachedBlock.SetOnFire();
             }
+            else
+            {
+                //the block we are trying to spread to is blocked by a blocker
+                //remove health from the blocker
+                marker.attachedBlock.attachedPlayer.LoseHealth(1);
+            }
         }
         RemoveSpreadMarkers();
         GenerateSpreadMarkers();
@@ -142,7 +148,7 @@ public class Fire : MonoBehaviour {
 
     public void GenerateSpreadMarkers()
     {
-        Debug.Log("Generating stuff");
+        //Debug.Log("Generating stuff");
         //Loop through with how many towers there are
         for (int i = 0; i < GameManager.instance.infernoTowers.Count + 1; i++)
         {
@@ -150,7 +156,7 @@ public class Fire : MonoBehaviour {
             for (int x = 0; x < 10; x++)
             {
                 //Pick a random block
-                Block randomAdjacent = adjacentBlocks[Random.Range(0, adjacentBlocks.Count)];
+                Block randomAdjacent = GetGeneratedFromList(adjacentBlocks);
 
                 //if there is not already a marker on this spot
                 //and if there is no blocker on the block
@@ -175,6 +181,23 @@ public class Fire : MonoBehaviour {
 
         }
         
+    }
+
+    private int spreadAttempt = 0;
+
+    public Block GetGeneratedFromList(List<Block> blocks)
+    {
+        float genFloat1 = (GameManager.instance.turnCount + blocksOnFire.Count + spreadMarkers.Count) * 0.5f + 0.5f;
+
+        float genFloat2 = (GameManager.instance.turnCount + spreadMarkers.Count + spreadAttempt) * 0.5f + 0.5f;
+
+        int genInt = (int) (Mathf.PerlinNoise(genFloat1, genFloat2) * blocks.Count);
+
+        Debug.Log(genFloat1  + " - " + genFloat2 + " - " + genInt);
+
+        spreadAttempt += 1;
+
+        return blocks[genInt];
     }
 
     public void RemoveSpreadMarkers()

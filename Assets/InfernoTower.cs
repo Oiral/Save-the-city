@@ -6,9 +6,14 @@ public class InfernoTower : MonoBehaviour {
 
     public Block attachedBlock;
 
+    public bool initialIgnition = true;
+
     private void Awake()
     {
-        GameManager.instance.infernoTowers.Add(this);
+        if (initialIgnition)
+        {
+            GameManager.instance.infernoTowers.Add(this);
+        }
         attachedBlock.infernoTower = this;
     }
 }

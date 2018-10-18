@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour {
 
     #endregion
 
+    public int turnCount = 0;
 
     public PlayerMovementScript selectedPlayer;
 
@@ -94,13 +95,16 @@ public class GameManager : MonoBehaviour {
 
 	public void NextTurn()
     {
-        Debug.Log("Next Turn");
+        //Debug.Log("Next Turn");
+
+        turnCount += 1;
 
         //Reset the action points
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         for (int i = 0; i < players.Length; i++)
         {
             players[i].GetComponent<PlayerMovementScript>().ResetActionPoints();
+            players[i].GetComponent<PlayerMovementScript>().NextTurnCheck();
         }
 
         //Create a new fire
@@ -117,7 +121,7 @@ public class GameManager : MonoBehaviour {
 
         //Spread the fire
         fire.ExpandFire();
-        Debug.Log(infernoTowers.Count);
+        //Debug.Log(infernoTowers.Count);
     
     }
 

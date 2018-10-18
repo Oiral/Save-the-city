@@ -16,8 +16,13 @@ public class PlayerMovementScript : MonoBehaviour {
     public int maxActionPoints = 3;
 
     public Text actionCounter;
+    public Text health;
 
     public MovementType movementType = MovementType.Corner;
+
+    public int maxHealth = 8;
+
+    public int currentHealth = 8;
 
     private void Start()
     {
@@ -53,10 +58,14 @@ public class PlayerMovementScript : MonoBehaviour {
     public void MovePlayer(Block blockToMove)
     {
         //check if we can move
-        if (currentBlock.connectedBlocks.Contains(blockToMove) && actionPoints > 0)
+        if (currentBlock.connectedBlocks.Contains(blockToMove) && actionPoints > 0 && blockToMove.onFire == false)
         {
             currentBlock.blockerOnBlock = false;
+            currentBlock.attachedPlayer = null;
+
             blockToMove.blockerOnBlock = true;
+            blockToMove.attachedPlayer = this;
+
             currentBlock = blockToMove;
             actionPoints -= 1;
         }
@@ -87,8 +96,8 @@ public class PlayerMovementScript : MonoBehaviour {
             default:
                 break;
         }
-        
-        actionCounter.text = actionPoints.ToString();
+
+        UpdateUI();
     }
 
     public void ResetActionPoints()
@@ -109,10 +118,12 @@ public class PlayerMovementScript : MonoBehaviour {
         }
         else if (movementType == MovementType.Block)
         {
+            return false;
+            /*
             if(currentBlock.connectedBlocks.Contains(blockClicked))
             {
                 inRange = true;
-            }
+            }*/
         }
 
         //if the block is actually on fire and we can actually put out a fire and we are in range
@@ -127,6 +138,45 @@ public class PlayerMovementScript : MonoBehaviour {
         {
             return false;
         }
+    }
+
+    public void NextTurnCheck()
+    {
+        //Check the current health
+        //check with all the block around to see if we need to lose health
+        if (movementType == MovementType.Corner)
+        {
+            for (int i = 0; i < currentCorner.connectedBlocks.Count; i++)
+            {
+                if (currentCorner.connectedBlocks[i].onFire)
+                {
+                    LoseHealth(1);
+                }
+            }
+        }
+
+        if (currentHealth <= 0)
+        {
+            Debug.Log("I am dead!", gameObject);
+            //Check if there are no more players left alive
+            if (GameObject.FindGameObjectsWithTag("Player").Length <= 1)
+            {
+                GameManager.instance.LoseGame();
+            }
+
+            Destroy(gameObject);
+        }
+    }
+
+    public void LoseHealth(int amount)
+    {
+        currentHealth -= amount;
+    }
+
+    public void UpdateUI()
+    {
+        actionCounter.text = actionPoints.ToString();
+        health.text = currentHealth.ToString();
     }
 
 }

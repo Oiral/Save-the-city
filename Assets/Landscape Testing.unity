@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -701,6 +701,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!43 &24119925
 Mesh:
   m_ObjectHideFlags: 0
@@ -1075,6 +1076,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &40917879
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1189,6 +1191,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &46203757
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1558,6 +1561,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &83498323
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1816,6 +1820,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &98474619
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2323,6 +2328,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &137488584
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2615,6 +2621,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!43 &167294885
 Mesh:
   m_ObjectHideFlags: 0
@@ -2914,6 +2921,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &173432091
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3030,6 +3038,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &177206766
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3140,6 +3149,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &181445546
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3691,6 +3701,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &207450960
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3831,7 +3842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f79107efc96f84d4a946139338a2187d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachedBlock: {fileID: 374877082}
+  attachedBlock: {fileID: 278828027}
 --- !u!4 &208895906
 Transform:
   m_ObjectHideFlags: 0
@@ -3839,7 +3850,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 208895902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23, y: 0, z: 17}
+  m_LocalPosition: {x: 23, y: 0, z: 7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3896,8 +3907,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 14.6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3919,13 +3930,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 217194147}
-  m_LocalRotation: {x: 0.649448, y: 0, z: 0, w: 0.760406}
-  m_LocalPosition: {x: 14.61, y: 24.59, z: 9.14}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 14.61, y: 24.59, z: 13.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 81, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!43 &222225149
 Mesh:
   m_ObjectHideFlags: 0
@@ -4371,6 +4382,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &224498894
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4485,6 +4497,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &231771155
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4891,6 +4904,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &239127480
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5227,6 +5241,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &253354287
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5453,6 +5468,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &267592266
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5569,6 +5585,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &278828028
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5684,6 +5701,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &280451339
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6599,6 +6617,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!1 &309128026
 GameObject:
   m_ObjectHideFlags: 0
@@ -6645,6 +6664,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &309128028
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6981,6 +7001,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &315139907
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7598,6 +7619,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &342569964
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7822,6 +7844,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &347303364
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8044,6 +8067,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &363236427
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8624,6 +8648,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!1 &375989161
 GameObject:
   m_ObjectHideFlags: 0
@@ -9588,6 +9613,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!4 &420599379
 Transform:
   m_ObjectHideFlags: 0
@@ -10063,6 +10089,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &453015753
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10577,6 +10604,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &466336495
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11288,7 +11316,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e0fe40b9823e394eb6ab84223a81ac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachedBlock: {fileID: 1504296869}
+  attachedBlock: {fileID: 1446882660}
+  initialIgnition: 1
 --- !u!65 &502659170
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11350,7 +11379,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 502659168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13, y: 1, z: 13}
+  m_LocalPosition: {x: 21, y: 1, z: 27}
   m_LocalScale: {x: 1, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11399,6 +11428,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &505266499
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11511,6 +11541,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &505593638
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11877,6 +11908,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &515046003
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12667,6 +12699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attachedBlock: {fileID: 420599378}
+  initialIgnition: 1
 --- !u!65 &550250866
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12924,19 +12957,25 @@ Prefab:
       propertyPath: currentCorner
       value: 
       objectReference: {fileID: 2121382254}
-    - target: {fileID: 1522707751647804, guid: 53069f6310c2002459960956bf9ef03c, type: 2}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 114111105462445484, guid: 53069f6310c2002459960956bf9ef03c,
+        type: 2}
+      propertyPath: actionPoints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114111105462445484, guid: 53069f6310c2002459960956bf9ef03c,
         type: 2}
       propertyPath: maxActionPoints
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114111105462445484, guid: 53069f6310c2002459960956bf9ef03c,
         type: 2}
-      propertyPath: actionPoints
-      value: 3
+      propertyPath: maxHealth
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114111105462445484, guid: 53069f6310c2002459960956bf9ef03c,
+        type: 2}
+      propertyPath: currentHealth
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53069f6310c2002459960956bf9ef03c, type: 2}
@@ -13591,6 +13630,7 @@ MonoBehaviour:
   connectedCorners:
   - {fileID: 2029435771}
   - {fileID: 13024223}
+  - {fileID: 1698486411}
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
@@ -14073,7 +14113,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4005542172164442, guid: 53069f6310c2002459960956bf9ef03c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 23
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 4005542172164442, guid: 53069f6310c2002459960956bf9ef03c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -14125,7 +14165,42 @@ Prefab:
         type: 2}
       propertyPath: currentBlock
       value: 
-      objectReference: {fileID: 374877082}
+      objectReference: {fileID: 1786425223}
+    - target: {fileID: 224256474267951498, guid: 53069f6310c2002459960956bf9ef03c,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.70710576
+      objectReference: {fileID: 0}
+    - target: {fileID: 224256474267951498, guid: 53069f6310c2002459960956bf9ef03c,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710784
+      objectReference: {fileID: 0}
+    - target: {fileID: 224256474267951498, guid: 53069f6310c2002459960956bf9ef03c,
+        type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 224833660096326170, guid: 53069f6310c2002459960956bf9ef03c,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224833660096326170, guid: 53069f6310c2002459960956bf9ef03c,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -13.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114111105462445484, guid: 53069f6310c2002459960956bf9ef03c,
+        type: 2}
+      propertyPath: maxHealth
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114111105462445484, guid: 53069f6310c2002459960956bf9ef03c,
+        type: 2}
+      propertyPath: currentHealth
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53069f6310c2002459960956bf9ef03c, type: 2}
   m_IsPrefabParent: 0
@@ -14173,6 +14248,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &634343024
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14288,6 +14364,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &640886469
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14401,6 +14478,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &642132384
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -15133,6 +15211,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &659821022
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -15650,6 +15729,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &670828273
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16088,6 +16168,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &718024676
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16202,6 +16283,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &720308458
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16876,6 +16958,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &730365030
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16991,6 +17074,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &731507107
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -17429,6 +17513,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!43 &762711199
 Mesh:
   m_ObjectHideFlags: 0
@@ -17683,6 +17768,105 @@ Transform:
   m_Children: []
   m_Father: {fileID: 32302327}
   m_RootOrder: 136
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &775089847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 775089852}
+  - component: {fileID: 775089851}
+  - component: {fileID: 775089850}
+  - component: {fileID: 775089849}
+  - component: {fileID: 775089848}
+  m_Layer: 0
+  m_Name: Inferno Tower (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &775089848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 775089847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e0fe40b9823e394eb6ab84223a81ac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachedBlock: {fileID: 267592265}
+  initialIgnition: 0
+--- !u!65 &775089849
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 775089847}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &775089850
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 775089847}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 19759c2a5f0fb8f4cbe6392cfca070d0, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &775089851
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 775089847}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &775089852
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 775089847}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3, y: 1, z: 15}
+  m_LocalScale: {x: 1, y: 2.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &776157076
 Mesh:
@@ -17946,6 +18130,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!43 &778936611
 Mesh:
   m_ObjectHideFlags: 0
@@ -18244,6 +18429,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &792752407
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18465,6 +18651,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!4 &804842280
 Transform:
   m_ObjectHideFlags: 0
@@ -18690,6 +18877,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &805828387
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18949,6 +19137,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!4 &823892302
 Transform:
   m_ObjectHideFlags: 0
@@ -19061,6 +19250,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &824660601
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19176,6 +19366,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &827830086
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19580,6 +19771,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!1 &870640929
 GameObject:
   m_ObjectHideFlags: 0
@@ -19729,6 +19921,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &880616150
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19843,6 +20036,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &881283905
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -20697,6 +20891,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!43 &924861322
 Mesh:
   m_ObjectHideFlags: 0
@@ -21035,6 +21230,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &957881325
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -21579,6 +21775,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &981111647
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -22056,6 +22253,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1002482216
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -22427,6 +22625,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1008222582
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -22541,6 +22740,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1013428804
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -22656,6 +22856,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1016892038
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -22915,6 +23116,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1027433808
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -23462,6 +23664,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!1 &1051998142
 GameObject:
   m_ObjectHideFlags: 0
@@ -23510,6 +23713,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1051998144
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -23609,7 +23813,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e0fe40b9823e394eb6ab84223a81ac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachedBlock: {fileID: 177206765}
+  attachedBlock: {fileID: 466336494}
+  initialIgnition: 1
 --- !u!65 &1052375954
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23671,7 +23876,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1052375952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 1, z: 17}
+  m_LocalPosition: {x: 3, y: 1, z: 25}
   m_LocalScale: {x: 1, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -23722,6 +23927,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1055205086
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -24452,6 +24658,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!1 &1077307945
 GameObject:
   m_ObjectHideFlags: 0
@@ -24567,6 +24774,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!1 &1077357411
 GameObject:
   m_ObjectHideFlags: 0
@@ -24613,6 +24821,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1077357413
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -24874,6 +25083,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1079897173
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -24987,6 +25197,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1081307533
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -25422,6 +25633,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!4 &1102707678
 Transform:
   m_ObjectHideFlags: 0
@@ -25937,6 +26149,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1128554076
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -26053,6 +26266,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1128707047
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -27441,6 +27655,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1170990544
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -27589,16 +27804,51 @@ Prefab:
     - target: {fileID: 114111105462445484, guid: 53069f6310c2002459960956bf9ef03c,
         type: 2}
       propertyPath: maxActionPoints
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114111105462445484, guid: 53069f6310c2002459960956bf9ef03c,
         type: 2}
       propertyPath: actionPoints
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1522707751647804, guid: 53069f6310c2002459960956bf9ef03c, type: 2}
       propertyPath: m_Name
       value: Player (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 224256474267951498, guid: 53069f6310c2002459960956bf9ef03c,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.70710576
+      objectReference: {fileID: 0}
+    - target: {fileID: 224256474267951498, guid: 53069f6310c2002459960956bf9ef03c,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710784
+      objectReference: {fileID: 0}
+    - target: {fileID: 224256474267951498, guid: 53069f6310c2002459960956bf9ef03c,
+        type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 224833660096326170, guid: 53069f6310c2002459960956bf9ef03c,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224833660096326170, guid: 53069f6310c2002459960956bf9ef03c,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -12.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 114111105462445484, guid: 53069f6310c2002459960956bf9ef03c,
+        type: 2}
+      propertyPath: maxHealth
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114111105462445484, guid: 53069f6310c2002459960956bf9ef03c,
+        type: 2}
+      propertyPath: currentHealth
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53069f6310c2002459960956bf9ef03c, type: 2}
@@ -27754,6 +28004,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!4 &1186337122
 Transform:
   m_ObjectHideFlags: 0
@@ -27865,6 +28116,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1190025848
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -28431,6 +28683,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1208750143
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -28945,6 +29198,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1224906982
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -29060,6 +29314,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1227210207
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -29174,6 +29429,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1229332729
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -29399,6 +29655,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!4 &1238819162
 Transform:
   m_ObjectHideFlags: 0
@@ -29628,7 +29885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f79107efc96f84d4a946139338a2187d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachedBlock: {fileID: 1170990543}
+  attachedBlock: {fileID: 1558334782}
 --- !u!4 &1243452508
 Transform:
   m_ObjectHideFlags: 0
@@ -29636,7 +29893,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1243452504}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9, y: 0, z: 7}
+  m_LocalPosition: {x: 3, y: 0, z: 7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -29687,6 +29944,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1244635514
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -30202,6 +30460,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1261819984
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -30327,6 +30586,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1269439120
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -30427,6 +30687,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1272375685
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -31102,6 +31363,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!43 &1314503984
 Mesh:
   m_ObjectHideFlags: 0
@@ -31292,6 +31554,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1320141493
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -31809,6 +32072,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1359029620
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -32140,6 +32404,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1382126966
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -32804,6 +33069,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1400201018
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -33244,6 +33510,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!1 &1412669523
 GameObject:
   m_ObjectHideFlags: 0
@@ -33397,6 +33664,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1415700523
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -33511,6 +33779,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1418719275
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -33736,6 +34005,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1422278224
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -34357,6 +34627,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1435566508
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -34871,6 +35142,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1446882661
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -35630,6 +35902,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1504296870
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -35745,6 +36018,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1509198568
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -36006,6 +36280,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1525431699
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -36121,6 +36396,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1527228232
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -36342,6 +36618,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1536413587
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -37371,6 +37648,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1558334783
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -37556,6 +37834,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!1 &1569447168
 GameObject:
   m_ObjectHideFlags: 0
@@ -37597,6 +37876,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1569447170
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -39191,6 +39471,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1623554475
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -39517,6 +39798,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1638494273
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -40247,6 +40529,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1671847104
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -40787,6 +41070,8 @@ MonoBehaviour:
   connectedCorners:
   - {fileID: 1589039723}
   - {fileID: 1679705567}
+  - {fileID: 2023720900}
+  - {fileID: 600265796}
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
@@ -41103,6 +41388,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1717551861
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -41364,6 +41650,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!4 &1724731438
 Transform:
   m_ObjectHideFlags: 0
@@ -43108,6 +43395,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1781619157
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -43224,6 +43512,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!4 &1785063178
 Transform:
   m_ObjectHideFlags: 0
@@ -43337,6 +43626,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!4 &1786425224
 Transform:
   m_ObjectHideFlags: 0
@@ -43520,6 +43810,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!1 &1789113492
 GameObject:
   m_ObjectHideFlags: 0
@@ -44376,6 +44667,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1806816947
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -44622,6 +44914,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1831517404
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -44948,6 +45241,93 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!1 &1846840403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1846840407}
+  - component: {fileID: 1846840406}
+  - component: {fileID: 1846840405}
+  - component: {fileID: 1846840404}
+  m_Layer: 0
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &1846840404
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1846840403}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1846840405
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1846840403}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: f29440829aaf50f4d9576f1a36b4454e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1846840406
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1846840403}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1846840407
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1846840403}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.956968, y: -0.1460886, z: 13.703459}
+  m_LocalScale: {x: 2.797606, y: 2.7976048, z: 2.7976048}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1848474025
 GameObject:
   m_ObjectHideFlags: 0
@@ -46049,6 +46429,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1923626650
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -47141,6 +47522,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &1985849765
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -47798,6 +48180,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &2008805978
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -47915,6 +48298,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &2010712599
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -48441,6 +48825,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &2018227572
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -48533,6 +48918,7 @@ MonoBehaviour:
   connectedCorners:
   - {fileID: 1389921241}
   - {fileID: 1609752728}
+  - {fileID: 1698486411}
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
@@ -49047,6 +49433,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &2030118704
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -49562,6 +49949,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &2068365506
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -49678,6 +50066,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &2076711548
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -49901,6 +50290,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &2111831246
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -50123,6 +50513,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!4 &2124218513
 Transform:
   m_ObjectHideFlags: 0
@@ -50488,6 +50879,7 @@ MonoBehaviour:
   attachedPump: {fileID: 0}
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
 --- !u!64 &2136226995
 MeshCollider:
   m_ObjectHideFlags: 0
