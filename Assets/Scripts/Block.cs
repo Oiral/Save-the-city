@@ -44,7 +44,6 @@ public class Block : MonoBehaviour {
         onFire = false;
         Destroy(fire);
         GameManager.instance.fire.RemoveBlock(this);
-
         
         if (infernoTower != null)
         {

@@ -130,6 +130,26 @@ public class Fire : MonoBehaviour {
                 //add to the adjacent block
                 adjacentBlocks.Add(blockToRemove);
             }
+            //if the next block is marked for spread
+            if (MarkersContains(connectBlock)){
+                //Check if the connect block has any connected blocks that are on fire
+                bool connectedOnFire = false;
+                for (int i = 0; i < connectBlock.connectedBlocks.Count; i++)
+                {
+                    if (connectBlock.connectedBlocks[i].onFire)
+                    {
+                        connectedOnFire = true;
+                        break;
+                    }
+                }
+
+                //its has no connected blocks that are on fire
+                //We want to remove the marker thingy
+                if (connectedOnFire == false)
+                {
+                    RemoveSpreadMarker(connectBlock);
+                }
+            }
         }
         blocksOnFire.Remove(blockToRemove);
     }
@@ -231,6 +251,19 @@ public class Fire : MonoBehaviour {
             }
         }
         return false;
+    }
+
+    public void RemoveSpreadMarker(Block blockToRemove)
+    {
+        for (int i = 0; i < spreadMarkers.Count; i++)
+        {
+            if (spreadMarkers[i].attachedBlock == blockToRemove)
+            {
+                Destroy(spreadMarkers[i].relatedObject);
+                spreadMarkers.RemoveAt(i);
+                break;
+            }
+        }
     }
 }
 

@@ -9,6 +9,7 @@ TagManager:
   - GameManager
   - Blocks
   - Corner
+  - Start
   layers:
   - Default
   - TransparentFX
