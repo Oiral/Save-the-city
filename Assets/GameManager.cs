@@ -89,8 +89,6 @@ public class GameManager : MonoBehaviour {
                 selectedPlayer.MovePlayer(blockToCheck);
             }
         }
-
-        
     }
 
 	public void NextTurn()

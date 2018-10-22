@@ -8,7 +8,7 @@ public class InfernoTower : MonoBehaviour {
 
     public bool initialIgnition = true;
 
-    private void Awake()
+    private void OnEnable()
     {
         if (initialIgnition)
         {

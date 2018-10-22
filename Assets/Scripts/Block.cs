@@ -55,4 +55,26 @@ public class Block : MonoBehaviour {
             }
         }
     }
+
+    [ContextMenu("Remove Block")]
+    public void RemoveBlock()
+    {
+        foreach (Block block in connectedBlocks)
+        {
+            block.connectedBlocks.Remove(this);
+            if (block.connectedCorners.Count == 0)
+            {
+                RemoveBlock();
+            }
+        }
+        foreach (Corner corner in connectedCorners)
+        {
+            corner.connectedBlocks.Remove(this);
+            if (corner.connectedCorners.Count == 0)
+            {
+                corner.RemoveCorner();
+            }
+        }
+        DestroyImmediate(gameObject);
+    }
 }

@@ -7,18 +7,21 @@ public class GenerateLandscape : MonoBehaviour {
     public GameObject cornerPrefab;
     public GameObject blockPrefab;
 
-    public int xSize;
-    public int zSize;
+    public int xSize = 15;
+    public int zSize = 15;
 
-    public float scale = 10;
+    public float scale = 0.8f;
     public float seed = 1;
 
-    public float gridDistance = 1;
+    public float gridDistance = 2;
 
     [Range(0,1)]
-    public float removeChance;
+    public float removeChance = 0.55f;
 
     public bool generateOnStart = false;
+
+    private GameObject blockParent;
+    private GameObject cornerParent;
 
     public void Awake()
     {
@@ -31,26 +34,34 @@ public class GenerateLandscape : MonoBehaviour {
     [ContextMenu("Generate the landscape")]
     public void Generate()
     {
+        if (blockParent != null)
+        {
+            DestroyImmediate(blockParent);
+        }
+        if (cornerParent != null)
+        {
+            DestroyImmediate(cornerParent);
+        }
+
         Vector3[,] verticies = new Vector3[xSize, zSize];
         GameObject[,] corners = new GameObject[xSize, zSize];
 
         //make a new empty game object for the parents of the corners and blocks
-        GameObject blockParent = Instantiate(new GameObject("Block Parent"), transform);
+        blockParent = new GameObject();
+        blockParent.transform.name = "Block Parent";
 
-        GameObject cornerParent = Instantiate(new GameObject("corner Parent"), transform);
+        cornerParent = new GameObject();
+        cornerParent.transform.name = "Corner Parent";
 
         for (int x = 0; x < xSize; x++)
         {
             for (int z = 0; z < zSize; z++)
             {
-                if (Mathf.PerlinNoise(x * scale + seed, z * scale + seed) > 0f)
-                {
-                    //Spawn in the corner prefab
-                    //Debug.Log(Mathf.PerlinNoise(x * scale + seed, z * scale + seed));
-                    corners[x, z] = Instantiate(cornerPrefab, new Vector3(gridDistance * x, 0, gridDistance * z), Quaternion.identity, cornerParent.transform);
+                //Spawn in the corner prefab
+                //Debug.Log(Mathf.PerlinNoise(x * scale + seed, z * scale + seed));
+                corners[x, z] = Instantiate(cornerPrefab, new Vector3(gridDistance * x, 0, gridDistance * z), Quaternion.identity, cornerParent.transform);
 
-                    verticies[x, z] = new Vector3(gridDistance * x, 0, gridDistance * z);
-                }
+                verticies[x, z] = new Vector3(gridDistance * x, 0, gridDistance * z);
             }
         }
 
@@ -151,11 +162,11 @@ public class GenerateLandscape : MonoBehaviour {
         }
 
         //Remove some random paths
-        for (int x = 1; x < xSize; x++)
+        for (int x = 0; x < xSize; x++)
         {
-            for (int z = 1; z < zSize; z++)
+            for (int z = 0; z < zSize; z++)
             {
-                if (Mathf.PerlinNoise((x * scale) + seed, (z * scale) + seed) > removeChance)
+                if (Mathf.PerlinNoise(((x + scale) * scale) + seed, ((z + scale) * scale) + seed ) > removeChance)
                 {
                     //Remove the linked corners
                     foreach (Corner AttachedCorner in corners[x,z].GetComponent<Corner>().connectedCorners)

@@ -111,5 +111,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectedCorners: []
+  connectedBlocks: []
   onFire: 0
-  fire: {fileID: 0}
+  fire: {fileID: 1319921159136804, guid: 6b088a2dfe6422340a624d8feac0a88f, type: 2}
+  attachedPump: {fileID: 0}
+  infernoTower: {fileID: 0}
+  blockerOnBlock: 0
+  attachedPlayer: {fileID: 0}
