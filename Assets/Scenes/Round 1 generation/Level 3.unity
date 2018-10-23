@@ -9293,6 +9293,7 @@ MonoBehaviour:
   connectedBlocks:
   - {fileID: 1546310593}
   - {fileID: 944000612}
+  - {fileID: 1455614308}
   connectedCorners:
   - {fileID: 922215872}
   - {fileID: 2095142380}
@@ -16978,31 +16979,6 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114660048764540656, guid: 3deef314d7af71341bc9bb2fc82aa04e,
-        type: 2}
-      propertyPath: xSize
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 114660048764540656, guid: 3deef314d7af71341bc9bb2fc82aa04e,
-        type: 2}
-      propertyPath: zSize
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 114660048764540656, guid: 3deef314d7af71341bc9bb2fc82aa04e,
-        type: 2}
-      propertyPath: seed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114660048764540656, guid: 3deef314d7af71341bc9bb2fc82aa04e,
-        type: 2}
-      propertyPath: removeChance
-      value: 0.481
-      objectReference: {fileID: 0}
-    - target: {fileID: 114660048764540656, guid: 3deef314d7af71341bc9bb2fc82aa04e,
-        type: 2}
-      propertyPath: scale
-      value: 1.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3deef314d7af71341bc9bb2fc82aa04e, type: 2}
   m_IsPrefabParent: 0
@@ -17740,6 +17716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectedBlocks:
   - {fileID: 1546310593}
+  - {fileID: 1455614308}
   connectedCorners:
   - {fileID: 944781091}
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,

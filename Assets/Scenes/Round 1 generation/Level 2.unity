@@ -7064,6 +7064,7 @@ MonoBehaviour:
   - {fileID: 250731441}
   connectedCorners:
   - {fileID: 1939995353}
+  - {fileID: 1030450760}
   streetPrefab: {fileID: 1277653239412612, guid: 0870c0781dd599644b2e96ca18fbff19,
     type: 2}
   blocked: 0
@@ -10272,6 +10273,24 @@ Prefab:
         type: 2}
       propertyPath: removeChance
       value: 0.481
+      objectReference: {fileID: 0}
+    - target: {fileID: 224072143573661432, guid: 3deef314d7af71341bc9bb2fc82aa04e,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1995270978044198, guid: 3deef314d7af71341bc9bb2fc82aa04e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224060861615311952, guid: 3deef314d7af71341bc9bb2fc82aa04e,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043400598926540, guid: 3deef314d7af71341bc9bb2fc82aa04e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3deef314d7af71341bc9bb2fc82aa04e, type: 2}
