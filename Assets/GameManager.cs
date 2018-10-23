@@ -37,6 +37,8 @@ public class GameManager : MonoBehaviour {
     public GameObject loseCanvas;
     public GameObject winCanvas;
 
+    public int globalSeed = 15663;
+
     [HideInInspector]
     public List<Block> blocksOnFire = new List<Block>();
 
