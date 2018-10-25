@@ -12,7 +12,7 @@ public class InfernoTower : MonoBehaviour {
     {
         if (initialIgnition)
         {
-            GameManager.instance.infernoTowers.Add(this);
+            LevelManager.instance.infernoTowers.Add(this);
         }
         attachedBlock.infernoTower = this;
     }

@@ -15,7 +15,7 @@ public class SceneFunctions : MonoBehaviour {
         loadedScene = SceneManager.GetActiveScene().buildIndex;
         if (levelNum != null)
         {
-            levelNum.text = loadedScene.ToString();
+            levelNum.text = (loadedScene - 1).ToString();
         }
     }
 

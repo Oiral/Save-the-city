@@ -17,12 +17,18 @@ public class PlayerMovementScript : MonoBehaviour {
 
     public Text actionCounter;
     public Text health;
+    public Image burnWarning;
 
     public MovementType movementType = MovementType.Corner;
 
     public int maxHealth = 8;
 
     public int currentHealth = 8;
+
+    public bool selected;
+
+    public GameObject movementMarkerPrefab;
+    private List<GameObject> movementMarkers = new List<GameObject>();
 
     private void Start()
     {
@@ -47,11 +53,13 @@ public class PlayerMovementScript : MonoBehaviour {
             {
                 cornerToMove.UnBlockCorner();
                 actionPoints -= 2;
+                GenerateMarkers();
             }
             else if (currentCorner.connectedCorners.Contains(cornerToMove) && actionPoints > 0 && cornerToMove.blocked == false)
             {
                 currentCorner = cornerToMove;
                 actionPoints -= 1;
+                GenerateMarkers();
             }
         }
     }
@@ -73,8 +81,9 @@ public class PlayerMovementScript : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        GameManager gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        gm.SelectPlayer(this);
+        LevelManager lm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<LevelManager>();
+        lm.SelectPlayer(this);
+        PlayerSelected();
     }
 
     private void Update()
@@ -161,7 +170,7 @@ public class PlayerMovementScript : MonoBehaviour {
             //Check if there are no more players left alive
             if (GameObject.FindGameObjectsWithTag("Player").Length <= 1)
             {
-                GameManager.instance.LoseGame();
+                LevelManager.instance.LoseGame();
             }
 
             Destroy(gameObject);
@@ -177,6 +186,68 @@ public class PlayerMovementScript : MonoBehaviour {
     {
         actionCounter.text = actionPoints.ToString();
         health.text = currentHealth.ToString();
+
+        if (movementType == MovementType.Corner)
+        {
+            foreach (Block block in currentCorner.connectedBlocks)
+            {
+                if (block.onFire)
+                {
+                    //toggle the fire marker on
+                    Color col = burnWarning.color;
+                    col.a = 1f;
+                    burnWarning.color = col;
+                    break;
+                }
+                else
+                {
+                    //toggle the fire marker off
+                    Color col = burnWarning.color;
+                    col.a = 0f;
+                    burnWarning.color = col;
+                }
+            }
+        }
+    }
+
+    public void PlayerSelected()
+    {
+        selected = true;
+        //enlarge the UI
+        //show the current movement markers
+        GenerateMarkers();
+    }
+
+    public void PlayerDeselected()
+    {
+        selected = false;
+        //shrink the UI
+        //remove the current movement markers
+        RemoveMarkers();
+    }
+
+    public void GenerateMarkers()
+    {
+        RemoveMarkers();
+        foreach (Corner corner in currentCorner.connectedCorners)
+        {
+            if (corner.blocked == false || corner.movable)
+            {
+                GameObject marker = Instantiate(movementMarkerPrefab);
+                Vector3 pos = corner.transform.position;
+                pos.y = 0.41f;
+                marker.transform.position = pos;
+                movementMarkers.Add(marker);
+            }
+        }
+    }
+    public void RemoveMarkers()
+    {
+        for (int i = 0; i < movementMarkers.Count; i++)
+        {
+            Destroy(movementMarkers[i]);
+        }
+        movementMarkers = new List<GameObject>();
     }
 
 }

@@ -9,6 +9,6 @@ public class Pump : MonoBehaviour {
     private void Start()
     {
         attachedBlock.attachedPump = this;
-        GameManager.instance.pumps.Add(this);
+        LevelManager.instance.pumps.Add(this);
     }
 }

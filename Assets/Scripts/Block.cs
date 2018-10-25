@@ -22,20 +22,20 @@ public class Block : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        GameManager.instance.CheckBlock(this);
+        LevelManager.instance.CheckBlock(this);
     }
 
     public void SetOnFire()
     {
         onFire = true;
         //Spawn in fire
-        fire = Instantiate(GameManager.instance.firePrefab,transform.position,Quaternion.Euler(-90,0,0), transform);
+        fire = Instantiate(LevelManager.instance.firePrefab,transform.position,Quaternion.Euler(-90,0,0), transform);
         //If there is an attached pump
         if (attachedPump != null)
         {
             //There is a pump attached to this block
             //Remove it from the gamemanager
-            GameManager.instance.LosePump(attachedPump);
+            LevelManager.instance.LosePump(attachedPump);
         }
         
     }
@@ -43,15 +43,15 @@ public class Block : MonoBehaviour {
     {
         onFire = false;
         Destroy(fire);
-        GameManager.instance.fire.RemoveBlock(this);
+        LevelManager.instance.fire.RemoveBlock(this);
         
         if (infernoTower != null)
         {
-            GameManager.instance.infernoTowers.Remove(infernoTower);
+            LevelManager.instance.infernoTowers.Remove(infernoTower);
             //If there is no more inferno towers
-            if (GameManager.instance.infernoTowers.Count <= 0)
+            if (LevelManager.instance.infernoTowers.Count <= 0)
             {
-                GameManager.instance.winCanvas.SetActive(true);
+                LevelManager.instance.winCanvas.SetActive(true);
             }
         }
     }

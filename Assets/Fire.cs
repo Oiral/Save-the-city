@@ -14,9 +14,9 @@ public class Fire : MonoBehaviour {
 
     private void Start()
     {
-        GameManager.instance.fire = this;
+        LevelManager.instance.fire = this;
 
-        foreach (InfernoTower towers in GameManager.instance.infernoTowers)
+        foreach (InfernoTower towers in LevelManager.instance.infernoTowers)
         {
             blocksOnFire.Add(towers.attachedBlock);
         }
@@ -91,7 +91,7 @@ public class Fire : MonoBehaviour {
                 //If its the inferno tower
                 if (marker.attachedBlock.infernoTower != null)
                 {
-                    GameManager.instance.infernoTowers.Add(marker.attachedBlock.infernoTower);
+                    LevelManager.instance.infernoTowers.Add(marker.attachedBlock.infernoTower);
                 }
 
                 //add each adjacent block of random adjacent to our adjacent blocks
@@ -170,7 +170,7 @@ public class Fire : MonoBehaviour {
     {
         //Debug.Log("Generating stuff");
         //Loop through with how many towers there are
-        for (int i = 0; i < GameManager.instance.infernoTowers.Count + 1; i++)
+        for (int i = 0; i < LevelManager.instance.infernoTowers.Count + 1; i++)
         {
             //only try to place 10 times until it gives up trying to place a block
             for (int x = 0; x < 10; x++)
@@ -207,9 +207,9 @@ public class Fire : MonoBehaviour {
 
     public Block GetGeneratedFromList(List<Block> blocks)
     {
-        float genFloat1 = (GameManager.instance.turnCount + blocksOnFire.Count + spreadMarkers.Count + GameManager.instance.globalSeed) * 0.5f + 0.5f;
+        float genFloat1 = (LevelManager.instance.turnCount + blocksOnFire.Count + spreadMarkers.Count + LevelManager.instance.globalSeed) * 0.5f + 0.5f;
 
-        float genFloat2 = (GameManager.instance.turnCount + spreadMarkers.Count + spreadAttempt + GameManager.instance.globalSeed) * 0.5f + 0.5f;
+        float genFloat2 = (LevelManager.instance.turnCount + spreadMarkers.Count + spreadAttempt + LevelManager.instance.globalSeed) * 0.5f + 0.5f;
 
         int genInt = (int) (Mathf.PerlinNoise(genFloat1, genFloat2) * blocks.Count);
 

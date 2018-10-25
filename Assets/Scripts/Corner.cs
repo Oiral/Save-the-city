@@ -17,7 +17,7 @@ public class Corner : MonoBehaviour {
     private void OnMouseDown()
     {
         Debug.Log("Corner", gameObject);
-        GameManager.instance.CheckCorner(this);
+        LevelManager.instance.CheckCorner(this);
     }
 
     public void BlockCorner()
@@ -28,7 +28,7 @@ public class Corner : MonoBehaviour {
     public void UnBlockCorner()
     {
         blocked = false;
-        GetComponent<MeshRenderer>().material = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().selectedMat;
+        GetComponent<MeshRenderer>().material = GameObject.FindGameObjectWithTag("GameManager").GetComponent<LevelManager>().selectedMat;
     }
 
     public void Start()
