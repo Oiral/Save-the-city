@@ -18,6 +18,7 @@ public class PlayerMovementScript : MonoBehaviour {
     public Text actionCounter;
     public Text health;
     public Image burnWarning;
+    public GameObject playerUI;
 
     public MovementType movementType = MovementType.Corner;
 
@@ -88,6 +89,7 @@ public class PlayerMovementScript : MonoBehaviour {
 
     private void Update()
     {
+
         switch (movementType)
         {
             case MovementType.Corner:
@@ -216,6 +218,7 @@ public class PlayerMovementScript : MonoBehaviour {
         //enlarge the UI
         //show the current movement markers
         GenerateMarkers();
+        playerUI.transform.localScale = Vector3.one * 0.1f;
     }
 
     public void PlayerDeselected()
@@ -224,6 +227,7 @@ public class PlayerMovementScript : MonoBehaviour {
         //shrink the UI
         //remove the current movement markers
         RemoveMarkers();
+        playerUI.transform.localScale = Vector3.one * 0.05f;
     }
 
     public void GenerateMarkers()

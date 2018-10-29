@@ -27,7 +27,8 @@ public class Fire : MonoBehaviour {
             block.SetOnFire();
         }
 
-        GenerateSpreadMarkers();
+        LevelManager.startGame += GenerateSpreadMarkers;
+
     }
 
     public void AddAdjacentBlocks(List<Block> blocksToAdd)

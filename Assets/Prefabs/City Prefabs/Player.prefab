@@ -207,6 +207,7 @@ MonoBehaviour:
   actionCounter: {fileID: 114234622665948888}
   health: {fileID: 114472901115026896}
   burnWarning: {fileID: 114176893262707762}
+  playerUI: {fileID: 1261142734902824}
   movementType: 0
   maxHealth: 4
   currentHealth: 4
@@ -419,7 +420,7 @@ RectTransform:
   m_GameObject: {fileID: 1261142734902824}
   m_LocalRotation: {x: 0.70710576, y: -0, z: -0, w: 0.70710784}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children:
   - {fileID: 224833660096326170}
   - {fileID: 224844471855355534}

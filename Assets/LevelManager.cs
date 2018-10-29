@@ -43,6 +43,17 @@ public class LevelManager : MonoBehaviour {
     [HideInInspector]
     public List<Block> blocksOnFire = new List<Block>();
 
+    public delegate void StartAction();
+    public static event StartAction startGame;
+
+    public void StartGame()
+    {
+        if (startGame != null)
+        {
+            startGame.Invoke();
+        }
+    }
+
     public void CheckCorner(Corner cornerToCheck)
     {
         if (selectedPlayer != null)

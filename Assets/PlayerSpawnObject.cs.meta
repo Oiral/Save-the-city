@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 48f05d87cfa65504eb542080344bdb0f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - details: {instanceID: 0}
+  - attachedCorner: {instanceID: 0}
+  - attachedBlock: {instanceID: 0}
+  - cornerPlayerPrefab: {fileID: 1522707751647804, guid: 53069f6310c2002459960956bf9ef03c,
+      type: 2}
+  - blockPlayerPrefab: {fileID: 1522707751647804, guid: 53069f6310c2002459960956bf9ef03c,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
