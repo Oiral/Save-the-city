@@ -12,7 +12,7 @@ public class CharacterPlacementScript : MonoBehaviour {
 
     public List<PlayerDetails> spawned = new List<PlayerDetails>();
 
-    private void Start()
+    private void Awake()
     {
         gm = GameManager.instance;
     }

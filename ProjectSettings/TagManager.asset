@@ -10,6 +10,7 @@ TagManager:
   - Blocks
   - Corner
   - Start
+  - Spawner
   layers:
   - Default
   - TransparentFX

@@ -14,7 +14,7 @@ public class PlayerSpawnObject : MonoBehaviour {
 
     private void OnEnable()
     {
-        LevelManager.startGame += SpawnRelated;
+        LevelManager.instance.startGame += SpawnRelated;
     }
 
     public void SpawnRelated()

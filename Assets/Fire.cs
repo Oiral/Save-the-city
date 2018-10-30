@@ -27,7 +27,7 @@ public class Fire : MonoBehaviour {
             block.SetOnFire();
         }
 
-        LevelManager.startGame += GenerateSpreadMarkers;
+        LevelManager.instance.startGame += GenerateSpreadMarkers;
 
     }
 
@@ -208,6 +208,7 @@ public class Fire : MonoBehaviour {
 
     public Block GetGeneratedFromList(List<Block> blocks)
     {
+        Debug.Log("Stuff", gameObject);
         float genFloat1 = (LevelManager.instance.turnCount + blocksOnFire.Count + spreadMarkers.Count + LevelManager.instance.globalSeed) * 0.5f + 0.5f;
 
         float genFloat2 = (LevelManager.instance.turnCount + spreadMarkers.Count + spreadAttempt + LevelManager.instance.globalSeed) * 0.5f + 0.5f;

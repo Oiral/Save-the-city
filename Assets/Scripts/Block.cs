@@ -51,7 +51,7 @@ public class Block : MonoBehaviour {
             //If there is no more inferno towers
             if (LevelManager.instance.infernoTowers.Count <= 0)
             {
-                LevelManager.instance.winCanvas.SetActive(true);
+                LevelManager.instance.WinLevel();
             }
         }
     }

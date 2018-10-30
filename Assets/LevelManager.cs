@@ -44,7 +44,9 @@ public class LevelManager : MonoBehaviour {
     public List<Block> blocksOnFire = new List<Block>();
 
     public delegate void StartAction();
-    public static event StartAction startGame;
+    public event StartAction startGame;
+
+    public PlayerDetails reward;
 
     public void StartGame()
     {
@@ -235,8 +237,13 @@ public class LevelManager : MonoBehaviour {
         loseCanvas.SetActive(true);
     }
 
-    public void LoseInfernoTower()
+    public void WinLevel()
     {
+        if (reward != null)
+        {
+            GameManager.instance.playerSquads.Add(reward);
+        }
+        Debug.Log("Win");
         winCanvas.SetActive(true);
     }
     
