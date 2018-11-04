@@ -22,4 +22,6 @@ public class GameManager : MonoBehaviour {
 
 
     public List<PlayerDetails> playerSquads = new List<PlayerDetails>();
+
+    public MovingStation station;
 }

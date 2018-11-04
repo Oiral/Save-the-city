@@ -28,6 +28,8 @@ public class PlayerMovementScript : MonoBehaviour {
 
     public bool selected;
 
+    public bool station;
+
     public GameObject movementMarkerPrefab;
     private List<GameObject> movementMarkers = new List<GameObject>();
 
@@ -170,7 +172,13 @@ public class PlayerMovementScript : MonoBehaviour {
         {
             Debug.Log("I am dead!", gameObject);
             //Check if there are no more players left alive
+            
             if (GameObject.FindGameObjectsWithTag("Player").Length <= 1)
+            {
+                LevelManager.instance.LoseGame();
+            }
+
+            if (GetComponent<Station>() != null)
             {
                 LevelManager.instance.LoseGame();
             }

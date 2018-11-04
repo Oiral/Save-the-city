@@ -214,13 +214,27 @@ public class LevelManager : MonoBehaviour {
         if (selectedPlayer != null)
         {
             //Reset the material on the select player
-            selectedPlayer.gameObject.GetComponent<MeshRenderer>().material = unSelectedMat;
+            ChangeMat(unSelectedMat);
             selectedPlayer.PlayerDeselected();
         }
 
         //select the player
         selectedPlayer = player;
-        selectedPlayer.gameObject.GetComponent<MeshRenderer>().material = selectedMat;
+
+        ChangeMat(selectedMat);
+    }
+
+    public void ChangeMat(Material matChange)
+    {
+        if (selectedPlayer.gameObject.GetComponent<MeshRenderer>() == null)
+        {
+
+            selectedPlayer.gameObject.GetComponentInChildren<MeshRenderer>().material = matChange;
+        }
+        else
+        {
+            selectedPlayer.gameObject.GetComponent<MeshRenderer>().material = matChange;
+        }
     }
 
     public void LosePump(Pump pumpToLose)
