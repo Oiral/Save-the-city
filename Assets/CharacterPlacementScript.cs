@@ -9,8 +9,12 @@ public class CharacterPlacementScript : MonoBehaviour {
     GameManager gm;
 
     public GameObject SpawnPlayerPrefab;
+    public GameObject SpawnStationPrefab;
 
     public List<PlayerDetails> spawned = new List<PlayerDetails>();
+
+    public bool stationPlaced;
+    public bool stationSelected;
 
     private void Awake()
     {
@@ -91,6 +95,15 @@ public class CharacterPlacementScript : MonoBehaviour {
         {
             setSelectedPlayer(3);
         }
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            SetSelectedStation();
+        }
+    }
+
+    public void SetSelectedStation()
+    {
+        stationSelected = true;
     }
 
     public void setSelectedPlayer(int number)
@@ -99,6 +112,7 @@ public class CharacterPlacementScript : MonoBehaviour {
         {
             Debug.Log("Set to player" + number);
             currentSelectedPlayer = number;
+            stationSelected = false;
         }
         else
         {
@@ -108,14 +122,21 @@ public class CharacterPlacementScript : MonoBehaviour {
 
     public void SpawnPlayer(Corner corner)
     {
-        GameObject player = Instantiate(SpawnPlayerPrefab);
-        PlayerSpawnObject spawnScript = player.GetComponent<PlayerSpawnObject>();
+        if (stationSelected == false)
+        {
+            GameObject player = Instantiate(SpawnPlayerPrefab);
+            PlayerSpawnObject spawnScript = player.GetComponent<PlayerSpawnObject>();
 
-        spawned.Add(gm.playerSquads[currentSelectedPlayer]);
+            spawned.Add(gm.playerSquads[currentSelectedPlayer]);
 
-        spawnScript.details = gm.playerSquads[currentSelectedPlayer];
-        spawnScript.attachedCorner = corner;
-        player.transform.position = corner.gameObject.transform.position;
+            spawnScript.details = gm.playerSquads[currentSelectedPlayer];
+            spawnScript.attachedCorner = corner;
+            player.transform.position = corner.gameObject.transform.position;
+        }
+        else
+        {
+            GameObject player = Instantiate(SpawnStationPrefab);
+        }
     }
 
     public void SpawnPlayer(Block block)
