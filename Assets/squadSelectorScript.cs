@@ -16,15 +16,27 @@ public class squadSelectorScript : MonoBehaviour {
     private void Start()
     {
         placementScript = GameObject.FindGameObjectWithTag("Spawner").GetComponent<CharacterPlacementScript>();
+
+        GameObject stationButton = Instantiate(buttonPrefab, transform);
+
+        Button stationButtonScript = stationButton.GetComponent<Button>();
+
+        stationButtonScript.onClick.AddListener(() => { selectButton(0,true); });
+
+        Text stationButtonText = stationButton.GetComponentInChildren<Text>();
+        stationButtonText.text = "Station ";
+
+        buttons.Add(stationButtonScript);
+
         for (int i = 0; i < GameManager.instance.playerSquads.Count; i++)
         {
             GameObject button = Instantiate(buttonPrefab, transform);
 
             Button buttonScript = button.GetComponent<Button>();
 
-            int num = i;
+            int num = i + 1;
 
-            buttonScript.onClick.AddListener(() => { selectButton(num); });
+            buttonScript.onClick.AddListener(() => { selectButton(num,false); });
 
             Text buttonText = button.GetComponentInChildren<Text>();
             buttonText.text = "Squad " + (i + 1).ToString();
@@ -33,10 +45,10 @@ public class squadSelectorScript : MonoBehaviour {
 
         }
 
-        selectButton(0);
+        selectButton(0,true);
     }
 
-    public void selectButton(int number)
+    public void selectButton(int number,bool selection)
     {
         Debug.Log("Select");
         for (int i = 0; i < buttons.Count; i++)
@@ -54,6 +66,13 @@ public class squadSelectorScript : MonoBehaviour {
             }
         }
         buttons[number].interactable = false;
-        placementScript.setSelectedPlayer(number);
+        if (selection == true)
+        {
+
+        }
+        else
+        {
+            placementScript.setSelectedPlayer(number);
+        }
     }
 }
