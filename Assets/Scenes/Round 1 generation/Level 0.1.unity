@@ -1835,7 +1835,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSquads:
-  - {fileID: 11400000, guid: 299ac6d5badd96b40b1d75fd8f9fba25, type: 2}
+  - {fileID: 11400000, guid: d296b74774009d54091198dee934400d, type: 2}
+  station: {fileID: 11400000, guid: d296b74774009d54091198dee934400d, type: 2}
 --- !u!4 &1348893943
 Transform:
   m_ObjectHideFlags: 0

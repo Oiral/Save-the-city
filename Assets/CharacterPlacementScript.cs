@@ -10,6 +10,8 @@ public class CharacterPlacementScript : MonoBehaviour {
 
     public GameObject SpawnPlayerPrefab;
 
+    public GameObject SpawnStationPrefab;
+
     public List<PlayerDetails> spawned = new List<PlayerDetails>();
 
     private void Awake()
@@ -108,7 +110,15 @@ public class CharacterPlacementScript : MonoBehaviour {
 
     public void SpawnPlayer(Corner corner)
     {
-        GameObject player = Instantiate(SpawnPlayerPrefab);
+        GameObject player;
+        if (gm.playerSquads[currentSelectedPlayer].station == true)
+        {
+            player = Instantiate(SpawnStationPrefab);
+        }
+        else
+        {
+            player = Instantiate(SpawnPlayerPrefab);
+        }
         PlayerSpawnObject spawnScript = player.GetComponent<PlayerSpawnObject>();
 
         spawned.Add(gm.playerSquads[currentSelectedPlayer]);

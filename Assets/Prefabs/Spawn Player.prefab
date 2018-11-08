@@ -103,6 +103,8 @@ MonoBehaviour:
     type: 2}
   blockPlayerPrefab: {fileID: 1522707751647804, guid: 53069f6310c2002459960956bf9ef03c,
     type: 2}
+  stationPlayerPrefab: {fileID: 1847064080435946, guid: bddc9b7d5038a874f8a3e690d72b6654,
+    type: 2}
 --- !u!136 &136135007657158064
 CapsuleCollider:
   m_ObjectHideFlags: 1

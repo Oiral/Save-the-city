@@ -1568,6 +1568,8 @@ MonoBehaviour:
   currentSelectedPlayer: 0
   SpawnPlayerPrefab: {fileID: 1758723183083944, guid: 78367d58e5b732248ba385ce678e8c88,
     type: 2}
+  SpawnStationPrefab: {fileID: 1636607049165220, guid: 489fe034e2e73c74a9bad374c222c390,
+    type: 2}
   spawned: []
 --- !u!114 &114462839007720282
 MonoBehaviour:

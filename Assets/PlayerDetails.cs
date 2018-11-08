@@ -10,6 +10,8 @@ public class PlayerDetails : ScriptableObject {
     public MovementType playerMovementType = MovementType.Corner;
     public Color playerColor = Color.red;
 
+    public bool station = false;
+
     public void SetPlayer(PlayerMovementScript movementScript)
     {
         movementScript.maxActionPoints = maxMoves;
@@ -19,5 +21,7 @@ public class PlayerDetails : ScriptableObject {
         movementScript.currentHealth = maxHealth;
 
         movementScript.movementType = playerMovementType;
+
+        movementScript.station = station;
     }
 }

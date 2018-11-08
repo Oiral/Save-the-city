@@ -174,7 +174,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: af08324fab8dc1b4aadf889d58a27171, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -312,6 +312,7 @@ MonoBehaviour:
   maxHealth: 4
   currentHealth: 4
   selected: 0
+  station: 0
   movementMarkerPrefab: {fileID: 1593022042437582, guid: 58a663fde10cf314e883898f0beed569,
     type: 2}
 --- !u!114 &114855969704362106

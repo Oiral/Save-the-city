@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerSpawnObject : MonoBehaviour {
 
@@ -11,6 +12,7 @@ public class PlayerSpawnObject : MonoBehaviour {
 
     public GameObject cornerPlayerPrefab;
     public GameObject blockPlayerPrefab;
+    public GameObject stationPlayerPrefab;
 
     private void OnEnable()
     {
@@ -21,7 +23,17 @@ public class PlayerSpawnObject : MonoBehaviour {
     {
         if (details.playerMovementType == MovementType.Corner)
         {
-            GameObject player = Instantiate(cornerPlayerPrefab);
+            GameObject player;
+            if (details.station)
+            {
+                player = Instantiate(stationPlayerPrefab);
+            }
+            else
+            {
+                player = Instantiate(cornerPlayerPrefab);
+            }
+
+            
             player.transform.position = transform.position;
             PlayerMovementScript movementScript = player.GetComponent<PlayerMovementScript>();
 
