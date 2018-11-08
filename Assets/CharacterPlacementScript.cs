@@ -11,6 +11,8 @@ public class CharacterPlacementScript : MonoBehaviour {
     public GameObject SpawnPlayerPrefab;
     public GameObject SpawnStationPrefab;
 
+    public GameObject SpawnStationPrefab;
+
     public List<PlayerDetails> spawned = new List<PlayerDetails>();
 
     public bool stationPlaced;
@@ -122,10 +124,16 @@ public class CharacterPlacementScript : MonoBehaviour {
 
     public void SpawnPlayer(Corner corner)
     {
-        if (stationSelected == false)
+        GameObject player;
+        if (gm.playerSquads[currentSelectedPlayer].station == true)
         {
-            GameObject player = Instantiate(SpawnPlayerPrefab);
-            PlayerSpawnObject spawnScript = player.GetComponent<PlayerSpawnObject>();
+            player = Instantiate(SpawnStationPrefab);
+        }
+        else
+        {
+            player = Instantiate(SpawnPlayerPrefab);
+        }
+        PlayerSpawnObject spawnScript = player.GetComponent<PlayerSpawnObject>();
 
             spawned.Add(gm.playerSquads[currentSelectedPlayer]);
 

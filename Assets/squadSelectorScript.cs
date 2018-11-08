@@ -39,7 +39,13 @@ public class squadSelectorScript : MonoBehaviour {
             buttonScript.onClick.AddListener(() => { selectButton(num,false); });
 
             Text buttonText = button.GetComponentInChildren<Text>();
-            buttonText.text = "Squad " + (i + 1).ToString();
+
+            buttonText.text = "Squad " + (i).ToString();
+            if (i == 0)
+            {
+                buttonText.text = "Station";
+            }
+            
 
             buttons.Add(buttonScript);
 
