@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PlayerType {Money,Votes };
 [CreateAssetMenu(fileName = "Player Info", menuName = "Player/Player Info", order = 1)]
 public class PlayerDetails : ScriptableObject {
     public string playerName = "Truck 1";
@@ -11,6 +12,8 @@ public class PlayerDetails : ScriptableObject {
     public Color playerColor = Color.red;
 
     public bool station = false;
+
+    public PlayerType type = PlayerType.Money;
 
     public void SetPlayer(PlayerMovementScript movementScript)
     {

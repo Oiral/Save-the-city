@@ -26,4 +26,19 @@ public class GameManager : MonoBehaviour {
     public PlayerDetails station;
 
     public int level;
+
+    public void ToggleSquadType(int num)
+    {
+        switch (playerSquads[num].type)
+        {
+            case PlayerType.Money:
+                playerSquads[num].type = PlayerType.Votes;
+                Debug.Log("Vote");
+                break;
+            case PlayerType.Votes:
+                playerSquads[num].type = PlayerType.Money;
+                Debug.Log("Money");
+                break;
+        }
+    }
 }
