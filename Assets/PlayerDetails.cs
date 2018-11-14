@@ -15,6 +15,8 @@ public class PlayerDetails : ScriptableObject {
 
     public PlayerType type = PlayerType.Money;
 
+    public bool dead;
+
     public void SetPlayer(PlayerMovementScript movementScript)
     {
         movementScript.maxActionPoints = maxMoves;

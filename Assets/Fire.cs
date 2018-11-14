@@ -208,14 +208,13 @@ public class Fire : MonoBehaviour {
 
     public Block GetGeneratedFromList(List<Block> blocks)
     {
-        Debug.Log("Stuff", gameObject);
         float genFloat1 = (LevelManager.instance.turnCount + blocksOnFire.Count + spreadMarkers.Count + LevelManager.instance.globalSeed) * 0.5f + 0.5f;
 
         float genFloat2 = (LevelManager.instance.turnCount + spreadMarkers.Count + spreadAttempt + LevelManager.instance.globalSeed) * 0.5f + 0.5f;
 
         int genInt = (int) (Mathf.PerlinNoise(genFloat1, genFloat2) * blocks.Count);
 
-        Debug.Log(genFloat1  + " - " + genFloat2 + " - " + genInt);
+        //Debug.Log(genFloat1  + " - " + genFloat2 + " - " + genInt);
 
         spreadAttempt += 1;
 

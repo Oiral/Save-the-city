@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class RelationshipManager : MonoBehaviour {
 
@@ -15,10 +16,13 @@ public class RelationshipManager : MonoBehaviour {
     public Button button1;
     public Button button2;
 
+    public List<int> levels;
+
     private void Start()
     {
         UpdateUI();
         GenerateButtons();
+        CheckSquads();
     }
 
     private void Update()
@@ -102,5 +106,37 @@ public class RelationshipManager : MonoBehaviour {
 
         float scale = Mathf.Pow(10, digits);
         return Mathf.Round(value * scale) / scale;
+    }
+
+    public void CheckSquads()
+    {
+        for (int i = 0; i < GameManager.instance.playerSquads.Count; i++)
+        {
+            int multiplier = 1;
+            if (GameManager.instance.playerSquads[i].dead)
+            {
+                //remove some score
+                multiplier = -1;
+            }
+
+            if (GameManager.instance.playerSquads[i].type == PlayerType.Money)
+            {
+                ChangeMoney(0.1f * multiplier);
+            }
+            else
+            {
+                ChangeVotes(0.1f * multiplier);
+            }
+        }
+    }
+
+    public void StartLevel()
+    {
+        int level = GameManager.instance.level;
+        if (level < levels.Count)
+        {
+            SceneManager.LoadScene(levels[level]);
+            GameManager.instance.level += 1;
+        }
     }
 }

@@ -41,4 +41,12 @@ public class GameManager : MonoBehaviour {
                 break;
         }
     }
+
+    public void RefreshSquads()
+    {
+        for (int i = 0; i < playerSquads.Count; i++)
+        {
+            playerSquads[i].dead = false;
+        }
+    }
 }

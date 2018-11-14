@@ -21,7 +21,7 @@ public class SceneFunctions : MonoBehaviour {
 
     public void NextLevel()
     {
-        SceneManager.LoadScene(loadedScene += 1);
+        SceneManager.LoadScene(1);
     }
 
     public void RestartLevel()
