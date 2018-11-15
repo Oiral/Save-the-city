@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Analytics;
 
 public class SceneFunctions : MonoBehaviour {
 
@@ -22,6 +23,13 @@ public class SceneFunctions : MonoBehaviour {
     public void NextLevel()
     {
         SceneManager.LoadScene(1);
+        if (FindObjectOfType<LevelManager>() != null)
+        {
+            Analytics.CustomEvent("gameOver", new Dictionary<string, object>
+        {
+            { "turns", LevelManager.instance.turnCount }
+        });
+        }
     }
 
     public void RestartLevel()

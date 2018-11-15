@@ -28,11 +28,7 @@ public class squadSelectorScript : MonoBehaviour {
 
             Text buttonText = button.GetComponentInChildren<Text>();
 
-            buttonText.text = "Squad " + (i).ToString();
-            if (i == 0)
-            {
-                buttonText.text = "Station";
-            }
+            buttonText.text = "Squad " + (i + 1).ToString();
             
 
             buttons.Add(buttonScript);

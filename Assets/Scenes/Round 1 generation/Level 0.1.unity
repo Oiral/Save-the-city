@@ -1837,6 +1837,7 @@ MonoBehaviour:
   playerSquads:
   - {fileID: 11400000, guid: d296b74774009d54091198dee934400d, type: 2}
   station: {fileID: 11400000, guid: d296b74774009d54091198dee934400d, type: 2}
+  level: 0
 --- !u!4 &1348893943
 Transform:
   m_ObjectHideFlags: 0
