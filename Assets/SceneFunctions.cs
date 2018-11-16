@@ -16,13 +16,15 @@ public class SceneFunctions : MonoBehaviour {
         loadedScene = SceneManager.GetActiveScene().buildIndex;
         if (levelNum != null)
         {
-            levelNum.text = (loadedScene - 1).ToString();
+            levelNum.text = (loadedScene + 1).ToString();
         }
     }
 
     public void NextLevel()
     {
-        SceneManager.LoadScene(1);
+
+        //SceneManager.LoadScene(1);
+        SceneManager.LoadScene(loadedScene += 1);
         if (FindObjectOfType<LevelManager>() != null)
         {
             Analytics.CustomEvent("gameOver", new Dictionary<string, object>
