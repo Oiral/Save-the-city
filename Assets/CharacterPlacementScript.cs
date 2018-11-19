@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterPlacementScript : MonoBehaviour {
 
@@ -13,6 +14,8 @@ public class CharacterPlacementScript : MonoBehaviour {
     public GameObject SpawnStationPrefab;
 
     public List<PlayerDetails> spawned = new List<PlayerDetails>();
+
+    public Button startLevelButton;
 
     private void Awake()
     {
@@ -110,6 +113,7 @@ public class CharacterPlacementScript : MonoBehaviour {
 
     public void SpawnPlayer(Corner corner)
     {
+        startLevelButton.interactable = true;
         GameObject player;
         if (gm.playerSquads[currentSelectedPlayer].station == true)
         {
@@ -130,6 +134,7 @@ public class CharacterPlacementScript : MonoBehaviour {
 
     public void SpawnPlayer(Block block)
     {
+        startLevelButton.interactable = true;
         GameObject player = Instantiate(SpawnPlayerPrefab);
         PlayerSpawnObject spawnScript = player.GetComponent<PlayerSpawnObject>();
 

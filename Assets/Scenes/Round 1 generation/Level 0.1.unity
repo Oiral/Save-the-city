@@ -672,6 +672,26 @@ MonoBehaviour:
   infernoTower: {fileID: 0}
   blockerOnBlock: 0
   attachedPlayer: {fileID: 0}
+--- !u!1 &558349635 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1697048509929120, guid: 3deef314d7af71341bc9bb2fc82aa04e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1790446906}
+--- !u!114 &558349636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 558349635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc3029e8f171144f8f7187c2463f7b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squadSelectionPanel: {fileID: 0}
+  startLevelButton: {fileID: 0}
+  notificationPanel: {fileID: 0}
+  notificationText: {fileID: 0}
 --- !u!1 &578773438
 GameObject:
   m_ObjectHideFlags: 0
@@ -1835,8 +1855,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSquads:
-  - {fileID: 11400000, guid: d296b74774009d54091198dee934400d, type: 2}
-  station: {fileID: 11400000, guid: d296b74774009d54091198dee934400d, type: 2}
+  - {fileID: 11400000, guid: 299ac6d5badd96b40b1d75fd8f9fba25, type: 2}
+  station: {fileID: 0}
   level: 0
 --- !u!4 &1348893943
 Transform:
@@ -2629,6 +2649,10 @@ Prefab:
     - target: {fileID: 4202323955382094, guid: 3deef314d7af71341bc9bb2fc82aa04e, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777670178576228, guid: 3deef314d7af71341bc9bb2fc82aa04e, type: 2}
+      propertyPath: m_Name
+      value: Notification Bar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3deef314d7af71341bc9bb2fc82aa04e, type: 2}
