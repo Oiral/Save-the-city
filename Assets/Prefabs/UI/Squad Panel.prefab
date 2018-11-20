@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 222155261140517522}
   - component: {fileID: 114528871245954912}
   - component: {fileID: 114383422967723162}
+  - component: {fileID: 114845692954123422}
   m_Layer: 0
   m_Name: Squad Panel
   m_TagString: Untagged
@@ -147,6 +148,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Squad 1
+--- !u!114 &114845692954123422
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1940189879812792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53413d04f9b6a894fb393e879e0dd5eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &222155261140517522
 CanvasRenderer:
   m_ObjectHideFlags: 1

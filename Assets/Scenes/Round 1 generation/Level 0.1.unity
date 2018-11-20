@@ -2654,6 +2654,11 @@ Prefab:
       propertyPath: m_Name
       value: Notification Bar
       objectReference: {fileID: 0}
+    - target: {fileID: 82459685604115394, guid: 3deef314d7af71341bc9bb2fc82aa04e,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.068
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3deef314d7af71341bc9bb2fc82aa04e, type: 2}
   m_IsPrefabParent: 0
