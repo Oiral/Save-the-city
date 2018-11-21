@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum Phase { Placement, PlayerTurn, FireSpread };
+
 public class LevelManager : MonoBehaviour {
 
     #region Singleton
@@ -22,6 +24,8 @@ public class LevelManager : MonoBehaviour {
     #endregion
 
     public int turnCount = 0;
+
+    public Phase phase = Phase.Placement;
 
     public PlayerMovementScript selectedPlayer;
 
@@ -53,6 +57,7 @@ public class LevelManager : MonoBehaviour {
         if (startGame != null)
         {
             startGame.Invoke();
+            phase = Phase.PlayerTurn;
         }
     }
 

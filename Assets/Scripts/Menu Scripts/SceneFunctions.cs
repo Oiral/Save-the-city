@@ -34,6 +34,13 @@ public class SceneFunctions : MonoBehaviour {
 
     public void RestartLevel()
     {
+        if (LevelManager.instance.reward != null)
+        {
+            if (GameManager.instance.playerSquads.Contains(LevelManager.instance.reward))
+            {
+                GameManager.instance.playerSquads.Remove(LevelManager.instance.reward);
+            }
+        }
         SceneManager.LoadScene(loadedScene);
     }
 
