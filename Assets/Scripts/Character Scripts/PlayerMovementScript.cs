@@ -178,11 +178,6 @@ public class PlayerMovementScript : MonoBehaviour {
                 LevelManager.instance.LoseGame();
             }
 
-            if (GetComponent<Station>() != null)
-            {
-                LevelManager.instance.LoseGame();
-            }
-
             Destroy(gameObject);
         }
     }
