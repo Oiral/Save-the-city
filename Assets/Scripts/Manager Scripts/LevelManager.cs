@@ -260,7 +260,10 @@ public class LevelManager : MonoBehaviour {
     {
         if (reward != null)
         {
-            GameManager.instance.playerSquads.Add(reward);
+            if (GameManager.instance.playerSquads.Contains(reward) == false)
+            {
+                GameManager.instance.playerSquads.Add(reward);
+            }
         }
         Debug.Log("Win");
         winCanvas.SetActive(true);

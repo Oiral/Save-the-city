@@ -2659,6 +2659,12 @@ Prefab:
       propertyPath: m_Volume
       value: 0.068
       objectReference: {fileID: 0}
+    - target: {fileID: 114084288247488008, guid: 3deef314d7af71341bc9bb2fc82aa04e,
+        type: 2}
+      propertyPath: reward
+      value: 
+      objectReference: {fileID: 11400000, guid: 789be68fe6224ac4b8b4029bfd39fb0e,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3deef314d7af71341bc9bb2fc82aa04e, type: 2}
   m_IsPrefabParent: 0
