@@ -46,6 +46,7 @@ public class squadSelectorScript : MonoBehaviour {
             if (placementScript.spawned.Contains(GameManager.instance.playerSquads[i]) == false)
             {
                 buttons[i].interactable = true;
+                
             }
             else
             {
@@ -54,8 +55,10 @@ public class squadSelectorScript : MonoBehaviour {
                 col.disabledColor = placedColour;
                 buttons[i].colors = col;
             }
+            buttons[i].GetComponent<SquadSelectionButton>().selected.SetActive(false);
         }
         buttons[number].interactable = false;
         placementScript.setSelectedPlayer(number);
+        buttons[number].GetComponent<SquadSelectionButton>().selected.SetActive(true);
     }
 }
