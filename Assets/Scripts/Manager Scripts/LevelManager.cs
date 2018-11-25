@@ -33,9 +33,11 @@ public class LevelManager : MonoBehaviour {
     public Material unSelectedMat;
 
     public GameObject firePrefab;
+    public GameObject fireParent;
+    public AstarPath Astar;
 
     public List<Pump> pumps;
-    public Fire fire;
+    public FireManager fire;
 
     public List<InfernoTower> infernoTowers;
 
@@ -78,7 +80,11 @@ public class LevelManager : MonoBehaviour {
         {
             if (selectedPlayer.CanRemoveFire(blockToCheck))
             {
-                blockToCheck.RemoveFire();
+                RemoveFire(blockToCheck);
+
+                Debug.Log("Putting out fire");
+                //Check all neighboring connections
+                
 
                 //set a corner to be disabled
                 //Pick a random corner
@@ -142,6 +148,50 @@ public class LevelManager : MonoBehaviour {
         fire.ExpandFire();
         //Debug.Log(infernoTowers.Count);
     
+    }
+
+    public void RemoveFire(Block blockToRemove)
+    {
+        blockToRemove.RemoveFire();
+        foreach (Block connectingBlock in blockToRemove.connectedBlocks)
+        {
+            if (connectingBlock.onFire)
+            {
+                //if we are not connected to 
+                if(FireManager.CheckConnected(connectingBlock.gameObject) == false)
+                {
+                    //remove all connected fire blocks
+                    RemoveAllConnectedFire(connectingBlock);
+                }
+            }
+        }
+        
+    }
+
+    public void RemoveAllConnectedFire(Block startingBlock)
+    {
+        List<Block> allConnectedFireBlocks = new List<Block>();
+
+        allConnectedFireBlocks.Add(startingBlock);
+
+        for (int i = 0; i < AstarPath.active.data.pointGraph.CountNodes(); i++)
+        {
+            foreach (Block block in allConnectedFireBlocks)
+            {
+                foreach (Block connectedBlock in block.connectedBlocks)
+                {
+                    if (connectedBlock.onFire && allConnectedFireBlocks.Contains(connectedBlock) == false)
+                    {
+                        allConnectedFireBlocks.Add(connectedBlock);
+                    }
+                }
+            }
+        }
+
+        foreach (Block block in allConnectedFireBlocks)
+        {
+            block.RemoveFire();
+        }
     }
 
     public void MakeNewFire()
