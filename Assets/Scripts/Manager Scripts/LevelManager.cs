@@ -153,10 +153,12 @@ public class LevelManager : MonoBehaviour {
     public void RemoveFire(Block blockToRemove)
     {
         blockToRemove.RemoveFire();
+        AstarPath.active.Scan();
         foreach (Block connectingBlock in blockToRemove.connectedBlocks)
         {
             if (connectingBlock.onFire)
             {
+                Debug.Log("Checking if connected");
                 //if we are not connected to 
                 if(FireManager.CheckConnected(connectingBlock.gameObject) == false)
                 {
@@ -173,12 +175,21 @@ public class LevelManager : MonoBehaviour {
         List<Block> allConnectedFireBlocks = new List<Block>();
 
         allConnectedFireBlocks.Add(startingBlock);
+        AstarPath.active.Scan();
+
+        Debug.Log(allConnectedFireBlocks.Count);
+        Debug.Log(AstarPath.active.data.pointGraph.CountNodes());
 
         for (int i = 0; i < AstarPath.active.data.pointGraph.CountNodes(); i++)
         {
-            foreach (Block block in allConnectedFireBlocks)
+            if (allConnectedFireBlocks.Count == AstarPath.active.data.pointGraph.CountNodes())
             {
-                foreach (Block connectedBlock in block.connectedBlocks)
+                break;
+            }
+
+            foreach (Block fireBlock in allConnectedFireBlocks)
+            {
+                foreach (Block connectedBlock in fireBlock.connectedBlocks)
                 {
                     if (connectedBlock.onFire && allConnectedFireBlocks.Contains(connectedBlock) == false)
                     {

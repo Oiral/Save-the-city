@@ -163,6 +163,7 @@ public class FireManager : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.S))
         {
             Debug.Log(CheckConnected(testMarker));
+            AstarPath.active.Scan();
         }
     }
 
