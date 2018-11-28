@@ -186,6 +186,7 @@ public class LevelManager : MonoBehaviour {
             {
                 break;
             }
+            List<Block> tempList = new List<Block>();
 
             foreach (Block fireBlock in allConnectedFireBlocks)
             {
@@ -193,10 +194,12 @@ public class LevelManager : MonoBehaviour {
                 {
                     if (connectedBlock.onFire && allConnectedFireBlocks.Contains(connectedBlock) == false)
                     {
-                        allConnectedFireBlocks.Add(connectedBlock);
+                        tempList.Add(connectedBlock);
                     }
                 }
             }
+
+            allConnectedFireBlocks.AddRange(tempList);
         }
 
         foreach (Block block in allConnectedFireBlocks)
