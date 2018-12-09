@@ -23,34 +23,43 @@ public class LevelManager : MonoBehaviour {
 
     #endregion
 
-    public int turnCount = 0;
+    public GameObject loseCanvas;
+    public GameObject winCanvas;
+    
 
-    public Phase phase = Phase.Placement;
+    [Header("Level")]
 
-    public PlayerMovementScript selectedPlayer;
+    public int globalSeed = 15663;
+
+    [HideInInspector]
+    public List<Block> blocksOnFire = new List<Block>();
+    public List<Pump> pumps;
+    public Fire fire;
+
+    public List<InfernoTower> infernoTowers;
+
+    [Header("Looks")]
 
     public Material selectedMat;
     public Material unSelectedMat;
 
     public GameObject firePrefab;
 
-    public List<Pump> pumps;
-    public Fire fire;
+    public CostumeSet costumeSet;
 
-    public List<InfernoTower> infernoTowers;
+    [Header("Gameplay")]
 
-    public GameObject loseCanvas;
-    public GameObject winCanvas;
+    public int turnCount = 0;
 
-    public int globalSeed = 15663;
+    public Phase phase = Phase.Placement;
 
-    [HideInInspector]
-    public List<Block> blocksOnFire = new List<Block>();
+    public PlayerMovementScript selectedPlayer;
+    
+    [Space]
+    public PlayerDetails reward;
 
     public delegate void StartAction();
     public event StartAction startGame;
-
-    public PlayerDetails reward;
 
     public void StartGame()
     {

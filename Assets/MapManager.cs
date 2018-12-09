@@ -4,7 +4,20 @@ using UnityEngine;
 
 public class MapManager : MonoBehaviour {
 
-	public List<MapMarker> markers = new List<MapMarker>();
+    public static MapManager instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }else if (instance != this)
+        {
+            Destroy(this);
+        }
+    }
+
+    public List<MapMarker> markers = new List<MapMarker>();
 
     public GameObject mainCamera;
     public int targetMarker = 0;

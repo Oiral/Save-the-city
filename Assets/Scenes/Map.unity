@@ -127,7 +127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &103714393
 Transform:
   m_ObjectHideFlags: 0
@@ -148,6 +148,69 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &228399054 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100016, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+  m_PrefabInternal: {fileID: 493349886}
+--- !u!114 &228399056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 228399054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184bd858d1691e7439ea2c36c5d12a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  markerNumber: 0
+--- !u!1 &296585332 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100028, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+  m_PrefabInternal: {fileID: 493349886}
+--- !u!114 &296585334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 296585332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184bd858d1691e7439ea2c36c5d12a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  markerNumber: 0
+--- !u!1 &396093528 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100024, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+  m_PrefabInternal: {fileID: 493349886}
+--- !u!114 &396093530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 396093528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184bd858d1691e7439ea2c36c5d12a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  markerNumber: 0
 --- !u!1 &427827256
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,18 +238,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d52e3360b238da24187ade1319bc77e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markers:
-  - {fileID: 1023166065}
-  - {fileID: 463355540}
-  - {fileID: 1357109170}
-  - {fileID: 1352579314}
-  - {fileID: 582008498}
-  - {fileID: 660446589}
-  - {fileID: 2130694237}
+  markers: []
   mainCamera: {fileID: 1077809957}
   targetMarker: 0
   moveSpeed: 1
-  offset: {x: 0, y: 15, z: 0}
+  offset: {x: 0, y: 10, z: 0}
 --- !u!4 &427827258
 Transform:
   m_ObjectHideFlags: 0
@@ -245,6 +301,57 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  markerNumber: 0
+--- !u!1001 &493349886
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300008, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f29440829aaf50f4d9576f1a36b4454e, type: 2}
+    - target: {fileID: 100000, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &582008496
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,6 +397,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  markerNumber: 0
 --- !u!1 &660446587
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,6 +443,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  markerNumber: 0
 --- !u!1 &951350083
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,6 +554,49 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  markerNumber: 0
+--- !u!1 &1036571065 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100022, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+  m_PrefabInternal: {fileID: 493349886}
+--- !u!114 &1036571067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1036571065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184bd858d1691e7439ea2c36c5d12a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  markerNumber: 0
+--- !u!1 &1057883761 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100012, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+  m_PrefabInternal: {fileID: 493349886}
+--- !u!114 &1057883763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1057883761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184bd858d1691e7439ea2c36c5d12a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  markerNumber: 0
 --- !u!1 &1077809957
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,6 +678,69 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 0}
+--- !u!1 &1105823691 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100004, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+  m_PrefabInternal: {fileID: 493349886}
+--- !u!114 &1105823695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1105823691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184bd858d1691e7439ea2c36c5d12a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  markerNumber: 0
+--- !u!1 &1158532924 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100008, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+  m_PrefabInternal: {fileID: 493349886}
+--- !u!114 &1158532928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1158532924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184bd858d1691e7439ea2c36c5d12a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  markerNumber: 0
+--- !u!1 &1286645692 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100014, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+  m_PrefabInternal: {fileID: 493349886}
+--- !u!114 &1286645694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1286645692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184bd858d1691e7439ea2c36c5d12a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  markerNumber: 0
 --- !u!1 &1352579312
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,6 +786,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  markerNumber: 0
 --- !u!1 &1357109168
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,6 +832,28 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  markerNumber: 0
+--- !u!1 &1363672317 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+  m_PrefabInternal: {fileID: 493349886}
+--- !u!114 &1363672321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1363672317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184bd858d1691e7439ea2c36c5d12a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  markerNumber: 0
 --- !u!1 &1460677359
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,7 +869,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1460677360
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -690,6 +928,111 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 0}
+--- !u!1 &1466209598 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100020, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+  m_PrefabInternal: {fileID: 493349886}
+--- !u!114 &1466209600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1466209598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184bd858d1691e7439ea2c36c5d12a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  markerNumber: 0
+--- !u!1 &1491685562 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100026, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+  m_PrefabInternal: {fileID: 493349886}
+--- !u!114 &1491685564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1491685562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184bd858d1691e7439ea2c36c5d12a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  markerNumber: 0
+--- !u!1 &1859465712 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100006, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+  m_PrefabInternal: {fileID: 493349886}
+--- !u!114 &1859465716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1859465712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184bd858d1691e7439ea2c36c5d12a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  markerNumber: 0
+--- !u!1 &1953219152 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100030, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+  m_PrefabInternal: {fileID: 493349886}
+--- !u!114 &1953219154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1953219152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184bd858d1691e7439ea2c36c5d12a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  markerNumber: 0
+--- !u!1 &1996981549 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100018, guid: 47c8be07cad0270418f53ce4b8dbd22e, type: 3}
+  m_PrefabInternal: {fileID: 493349886}
+--- !u!114 &1996981551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1996981549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184bd858d1691e7439ea2c36c5d12a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  markerNumber: 0
 --- !u!1 &2130694235
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,3 +1078,4 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  markerNumber: 0

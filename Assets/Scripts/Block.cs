@@ -20,6 +20,15 @@ public class Block : MonoBehaviour {
 
     public PlayerMovementScript attachedPlayer;
 
+    //Set the costume
+    private void Start()
+    {
+        if (LevelManager.instance.costumeSet != null)
+        {
+            Instantiate(LevelManager.instance.costumeSet.blockCostumes[Random.Range(0, LevelManager.instance.costumeSet.blockCostumes.Count)],transform);
+        }
+    }
+
     private void OnMouseDown()
     {
         LevelManager.instance.CheckBlock(this);
