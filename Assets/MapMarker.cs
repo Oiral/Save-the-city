@@ -11,8 +11,13 @@ public class MapMarker : MonoBehaviour {
 
     private void Start()
     {
-        MapManager.instance.markers.Add(this);
-        markerNumber = MapManager.instance.markers.IndexOf(this);
+        MapManager map = MapManager.instance;
+        map.markers.Add(this);
+        markerNumber = map.markers.IndexOf(this);
+
+        SceneFunctions sceneFunctions = map.GetComponent<SceneFunctions>();
+
+        markerEvent.AddListener(delegate { sceneFunctions.LoadLevel(markerNumber); });
     }
 
     private void OnMouseDown()

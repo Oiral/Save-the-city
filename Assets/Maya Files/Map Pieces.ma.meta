@@ -19,6 +19,10 @@ ModelImporter:
     100026: pPlane7
     100028: pPlane8
     100030: pPlane9
+    100032: pPlane15
+    100034: pPlane16
+    100036: pPlane17
+    100038: pPlane18
     400000: //RootNode
     400002: pPlane1
     400004: pPlane2
@@ -35,6 +39,10 @@ ModelImporter:
     400026: pPlane7
     400028: pPlane8
     400030: pPlane9
+    400032: pPlane15
+    400034: pPlane16
+    400036: pPlane17
+    400038: pPlane18
     2100000: lambert1
     2300000: //RootNode
     2300002: pPlane1
@@ -51,6 +59,10 @@ ModelImporter:
     2300024: pPlane7
     2300026: pPlane8
     2300028: pPlane9
+    2300030: pPlane15
+    2300032: pPlane16
+    2300034: pPlane17
+    2300036: pPlane18
     3300000: //RootNode
     3300002: pPlane1
     3300004: pPlane2
@@ -66,6 +78,10 @@ ModelImporter:
     3300024: pPlane7
     3300026: pPlane8
     3300028: pPlane9
+    3300030: pPlane15
+    3300032: pPlane16
+    3300034: pPlane17
+    3300036: pPlane18
     4300000: pPlane1
     4300002: pPlane2
     4300004: pPlane3
@@ -80,6 +96,10 @@ ModelImporter:
     4300022: pPlane12
     4300024: pPlane13
     4300026: pPlane14
+    4300028: pPlane15
+    4300030: pPlane16
+    4300032: pPlane17
+    4300034: pPlane18
     6400000: pPlane1
     6400002: pPlane10
     6400004: pPlane11
@@ -94,6 +114,10 @@ ModelImporter:
     6400022: pPlane7
     6400024: pPlane8
     6400026: pPlane9
+    6400028: pPlane15
+    6400030: pPlane16
+    6400032: pPlane17
+    6400034: pPlane18
   externalObjects: {}
   materials:
     importMaterials: 1

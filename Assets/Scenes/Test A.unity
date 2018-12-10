@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11787,7 +11787,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAABoIexQoOqyOQEAAAACAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlUctuwjAQ/JXI54JCiEnSMwj10iIeH7CxN8mKxEa2QwmIf6/NQ6XqaVezszPj9YUZrR17jy7sEzr0DWNvEdsOh1u/U+SGhapJ4XhrQNlKmy4QlruPeSBgignIWGIicZJjNuIZFnlWIC9mPM4mFbt6tkUwotlCfdd0UNcog0wHpzlZB0oEu6lHWurI2RAoYidfYo8Nj3oONQqCBgYBNuSuoLXokd5iMl81gyVhX2DXkNiv/7Ff4TVI6sNOMp7lQRtFbywd8YXfgd3fMx2h7cNkxG9B6p7k3wGbTidZWhaiTEuUCPEozf2JeJ4jF7zEXLLbJvnTErQrVNC65wv1AZVvnemDq3r8yEqTcksDhybcTBr4XtK50/aXSarSG2EQ1ddd4RncovEmdEa5kOS02aBzpOqwyi5Xdv0BUEsDBBQAAAgIAABoIexVblmkbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jPWUVBKL0osyCgGChiCOKWZKSB2tJKxsaG5SZJlcpJJUmpKaqKBromFUWKKqYVFqmmyaVKqRYpSLFB9SWVBql9ibipET0BiSUZaZl5KZl66XkB+Zl6JO8hspdhaAFBLAQItABQAAAgIAABoIexQoOqyOQEAAAACAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAABoIexVblmkbQAAAHgAAAAJACQAAAAAAAAAAAAAAIYBAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAPgIAAAAA
+    dataString: UEsDBBQAAAgIAABoIexzynybNAEAAP0BAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlUctugzAQ/BXkc1NhCAF6Jop6aaM8PmBlL7AK2JFt0pAo/147jzZVTzsazc6M12dmtHbsLTqzD+jRA8ZeIrYZ91e8VeTGuWpI4evGgLK1Nn0QLLbvVRDgFBOQscREIi8wn2Q5lkVeYlbOsjjnNbt4tUUwot1Ac/N00DQog00Px4qsAyVCXOqZjnpyNhSK2NGP2HPjfZ7CjIKhgVGADb1r6Cx6ZrCYVMt2tCTsE+1aErvVP/UzvQJJQ9jhwRjFYCwd8Encg93dCh2gG/CnRDOQ/MszmXOeTzmmUgDERToRs5nISp5CnNS8qKfsukn+rATdEhV07vE6vUfloTNDCFX331hqUi5aGNi34WDSwNeCTr22v1JStV4Lg6g+bxaP4haNT6ETyrkkp80anSPVhFV2vrDLN1BLAwQUAAAICAAAaCHsWmwaXW0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9Iz1lFQSi9KLMgoBgoYgjilmSkgdrRSirmhobmJYapxSnJiooGFsW6ymVmyqaWhcaKBUZqhRZqJUixQfUllQapfYm4qRE9AYklGWmZeSmZeul5AfmZeiTvIbKXYWgBQSwECLQAUAAAICAAAaCHsc8p8mzQBAAD9AQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAaCHsWmwaXW0AAAB4AAAACQAkAAAAAAAAAAAAAACBAQAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAADkCAAAAAA==
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -11813,7 +11813,8 @@ MonoBehaviour:
     _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
     _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
     _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
-    _AreaColors: []
+    _AreaColors:
+    - {r: 0, g: 0, b: 0, a: 0}
   tagNames:
   - Basic Ground
   - 1
@@ -17803,6 +17804,12 @@ Prefab:
       propertyPath: Astar
       value: 
       objectReference: {fileID: 1201333179}
+    - target: {fileID: 114084288247488008, guid: 3deef314d7af71341bc9bb2fc82aa04e,
+        type: 2}
+      propertyPath: costumeSet
+      value: 
+      objectReference: {fileID: 11400000, guid: 323dcd1ec376fff45aba9f7ba96c7204,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3deef314d7af71341bc9bb2fc82aa04e, type: 2}
   m_IsPrefabParent: 0

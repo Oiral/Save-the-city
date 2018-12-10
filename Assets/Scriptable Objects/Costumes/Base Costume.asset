@@ -11,4 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9869818b58099b7428d08089b0db8ed7, type: 3}
   m_Name: Base Costume
   m_EditorClassIdentifier: 
-  blockCostumes: []
+  blockCostumes:
+  - {fileID: 1750954410373542, guid: 797ca6e1ae1fa7e4e9eea9d360ee8a94, type: 2}
+  - {fileID: 1306580900284254, guid: 91805de265d9093499a600ba607cc147, type: 2}

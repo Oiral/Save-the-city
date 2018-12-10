@@ -57,7 +57,7 @@ public class Block : MonoBehaviour {
         Debug.Log("Destryoing fire");
         LevelManager.instance.fire.RemoveBlock(this);
         //Maunally go in and remove the node
-        AstarPath.active.GetNearest(transform.position).node.Walkable = false;
+        //AstarPath.active.GetNearest(transform.position).node.Walkable = false;
         AstarPath.active.Scan();
         
         if (infernoTower != null)

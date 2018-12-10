@@ -34,7 +34,7 @@ public class LevelManager : MonoBehaviour {
     [HideInInspector]
     public List<Block> blocksOnFire = new List<Block>();
     public List<Pump> pumps;
-    public Fire fire;
+    //public Fire fire;
 
     public List<InfernoTower> infernoTowers;
 
@@ -48,7 +48,7 @@ public class LevelManager : MonoBehaviour {
     public AstarPath Astar;
 
     public CostumeSet costumeSet;
-    public List<Pump> pumps;
+    //public List<Pump> pumps;
     public FireManager fire;
 
     [Header("Gameplay")]
