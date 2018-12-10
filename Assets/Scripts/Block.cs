@@ -38,7 +38,8 @@ public class Block : MonoBehaviour {
     {
         onFire = true;
         //Spawn in fire
-        fire = Instantiate(LevelManager.instance.firePrefab,transform.position,Quaternion.Euler(-90,0,0), transform);
+        fire = Instantiate(LevelManager.instance.firePrefab,transform.position,Quaternion.Euler(-90,0,0), LevelManager.instance.fireParent.transform);
+        LevelManager.instance.Astar.Scan();
         //If there is an attached pump
         if (attachedPump != null)
         {
@@ -51,8 +52,13 @@ public class Block : MonoBehaviour {
     public void RemoveFire()
     {
         onFire = false;
+        fire.transform.parent = null;
         Destroy(fire);
+        Debug.Log("Destryoing fire");
         LevelManager.instance.fire.RemoveBlock(this);
+        //Maunally go in and remove the node
+        AstarPath.active.GetNearest(transform.position).node.Walkable = false;
+        AstarPath.active.Scan();
         
         if (infernoTower != null)
         {

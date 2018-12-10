@@ -44,8 +44,12 @@ public class LevelManager : MonoBehaviour {
     public Material unSelectedMat;
 
     public GameObject firePrefab;
+    public GameObject fireParent;
+    public AstarPath Astar;
 
     public CostumeSet costumeSet;
+    public List<Pump> pumps;
+    public FireManager fire;
 
     [Header("Gameplay")]
 
@@ -87,7 +91,11 @@ public class LevelManager : MonoBehaviour {
         {
             if (selectedPlayer.CanRemoveFire(blockToCheck))
             {
-                blockToCheck.RemoveFire();
+                RemoveFire(blockToCheck);
+
+                Debug.Log("Putting out fire");
+                //Check all neighboring connections
+                
 
                 //set a corner to be disabled
                 //Pick a random corner
@@ -151,6 +159,64 @@ public class LevelManager : MonoBehaviour {
         fire.ExpandFire();
         //Debug.Log(infernoTowers.Count);
     
+    }
+
+    public void RemoveFire(Block blockToRemove)
+    {
+        blockToRemove.RemoveFire();
+        AstarPath.active.Scan();
+        foreach (Block connectingBlock in blockToRemove.connectedBlocks)
+        {
+            if (connectingBlock.onFire)
+            {
+                Debug.Log("Checking if connected");
+                //if we are not connected to 
+                if(FireManager.CheckConnected(connectingBlock.gameObject) == false)
+                {
+                    //remove all connected fire blocks
+                    RemoveAllConnectedFire(connectingBlock);
+                }
+            }
+        }
+        
+    }
+
+    public void RemoveAllConnectedFire(Block startingBlock)
+    {
+        List<Block> allConnectedFireBlocks = new List<Block>();
+
+        allConnectedFireBlocks.Add(startingBlock);
+        AstarPath.active.Scan();
+
+        Debug.Log(allConnectedFireBlocks.Count);
+        Debug.Log(AstarPath.active.data.pointGraph.CountNodes());
+
+        for (int i = 0; i < AstarPath.active.data.pointGraph.CountNodes(); i++)
+        {
+            if (allConnectedFireBlocks.Count == AstarPath.active.data.pointGraph.CountNodes())
+            {
+                break;
+            }
+            List<Block> tempList = new List<Block>();
+
+            foreach (Block fireBlock in allConnectedFireBlocks)
+            {
+                foreach (Block connectedBlock in fireBlock.connectedBlocks)
+                {
+                    if (connectedBlock.onFire && allConnectedFireBlocks.Contains(connectedBlock) == false)
+                    {
+                        tempList.Add(connectedBlock);
+                    }
+                }
+            }
+
+            allConnectedFireBlocks.AddRange(tempList);
+        }
+
+        foreach (Block block in allConnectedFireBlocks)
+        {
+            block.RemoveFire();
+        }
     }
 
     public void MakeNewFire()

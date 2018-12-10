@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11785,10 +11785,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  astarData:
-    dataString: 
+  version: 1
+  data:
+    dataString: UEsDBBQAAAgIAABoIexQoOqyOQEAAAACAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlUctuwjAQ/JXI54JCiEnSMwj10iIeH7CxN8mKxEa2QwmIf6/NQ6XqaVezszPj9YUZrR17jy7sEzr0DWNvEdsOh1u/U+SGhapJ4XhrQNlKmy4QlruPeSBgignIWGIicZJjNuIZFnlWIC9mPM4mFbt6tkUwotlCfdd0UNcog0wHpzlZB0oEu6lHWurI2RAoYidfYo8Nj3oONQqCBgYBNuSuoLXokd5iMl81gyVhX2DXkNiv/7Ff4TVI6sNOMp7lQRtFbywd8YXfgd3fMx2h7cNkxG9B6p7k3wGbTidZWhaiTEuUCPEozf2JeJ4jF7zEXLLbJvnTErQrVNC65wv1AZVvnemDq3r8yEqTcksDhybcTBr4XtK50/aXSarSG2EQ1ddd4RncovEmdEa5kOS02aBzpOqwyi5Xdv0BUEsDBBQAAAgIAABoIexVblmkbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jPWUVBKL0osyCgGChiCOKWZKSB2tJKxsaG5SZJlcpJJUmpKaqKBromFUWKKqYVFqmmyaVKqRYpSLFB9SWVBql9ibipET0BiSUZaZl5KZl66XkB+Zl6JO8hspdhaAFBLAQItABQAAAgIAABoIexQoOqyOQEAAAACAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAABoIexVblmkbQAAAHgAAAAJACQAAAAAAAAAAAAAAIYBAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAPgIAAAAA
     upgradeData: 
-    data_backup: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
     cacheStartup: 0
@@ -11807,13 +11807,12 @@ MonoBehaviour:
   prioritizeGraphs: 0
   prioritizeGraphsLimit: 1
   colorSettings:
-    _NodeConnection: {r: 1, g: 1, b: 1, a: 0.9}
+    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
     _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
     _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
     _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
     _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
     _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
-    _MeshColor: {r: 0.125, g: 0.686, b: 0, a: 0.19}
     _AreaColors: []
   tagNames:
   - Basic Ground
@@ -11852,7 +11851,6 @@ MonoBehaviour:
   heuristicScale: 1
   threadCount: 0
   maxFrameTime: 1
-  minAreaSize: 0
   batchGraphUpdates: 0
   graphUpdateBatchingInterval: 0.2
   euclideanEmbedding:
@@ -11861,7 +11859,6 @@ MonoBehaviour:
     pivotPointRoot: {fileID: 0}
     spreadOutCount: 1
   showGraphs: 1
-  lastUniqueAreaIndex: 0
 --- !u!4 &1201333180
 Transform:
   m_ObjectHideFlags: 0
